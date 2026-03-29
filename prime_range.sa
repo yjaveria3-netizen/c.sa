@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int start, end;
+    printf("Enter start of range: ");
+    scanf("%d", &start);
+    printf("Enter end of range: ");
+    scanf("%d", &end);
+    
+    printf("Prime numbers between %d and %d: ", start, end);
+    for (int i = start; i <= end; i++) {
+        int isPrime = 1;
+        for (int j = 2; j * j <= i; j++) {
+            if (i % j == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+        if (isPrime && i > 1) printf("%d ", i);
+    }
+    printf("\n");
+    
+    return 0;
+}

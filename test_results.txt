@@ -1,0 +1,611 @@
+Quantum Language — Test Results (in progress)
+Generated : 2026-03-28 22:59:47
+Directory : C:\Users\HP\OneDrive\Documents\Projects\Quantum-Language\examples\library\C\
+Total     : 301   (running...)
+========================================================================
+
+[PASS] C\algorithms\binary search.sa
+
+[PASS] C\algorithms\binary_search.sa
+
+[PASS] C\algorithms\bubble sort.sa
+
+[PASS] C\algorithms\bubble_sort.sa
+
+[PASS] C\algorithms\fibonacci.sa
+
+[PASS] C\algorithms\fibonaci series.sa
+
+[PASS] C\algorithms\gcd.sa
+
+[PASS] C\algorithms\insertion_sort.sa
+
+[PASS] C\algorithms\linear search.sa
+
+[PASS] C\algorithms\linear_search.sa
+
+[PASS] C\algorithms\prime sieve.sa
+
+[PASS] C\algorithms\quantum_research_matrix.sa
+
+[PASS] C\algorithms\quick sort.sa
+
+[PASS] C\algorithms\reverse an array.sa
+
+[PASS] C\algorithms\selection_sort.sa
+
+[PASS] C\boundary_elements.sa
+
+[PASS] C\boundary_sum.sa
+
+[PASS] C\column_sums.sa
+
+[PASS] C\data_structures\abstract_pattern_matrix.sa
+
+[PASS] C\data_structures\alternating_pattern_matrix.sa
+
+[PASS] C\data_structures\antimatter_matrix.sa
+
+[PASS] C\data_structures\argyle_pattern_matrix.sa
+
+[PASS] C\data_structures\array_min_max.sa
+
+[PASS] C\data_structures\array_operations.sa
+
+[PASS] C\data_structures\arrow_pattern_matrix.sa
+
+[PASS] C\data_structures\aurora_pattern_matrix.sa
+
+[PASS] C\data_structures\black_hole_matrix.sa
+
+[PASS] C\data_structures\border_pattern_matrix.sa
+
+[PASS] C\data_structures\braided_pattern_matrix.sa
+
+[PASS] C\data_structures\brane_cosmology_matrix.sa
+
+[PASS] C\data_structures\brick_pattern_matrix.sa
+
+[PASS] C\data_structures\butterfly_pattern_matrix.sa
+
+[PASS] C\data_structures\causal_dynamical_triangulation_matrix.sa
+
+[PASS] C\data_structures\causal_set_theory_matrix.sa
+
+[PASS] C\data_structures\checkerboard_matrix.sa
+
+[PASS] C\data_structures\chessboard_pattern_matrix.sa
+
+[PASS] C\data_structures\chevron_pattern_matrix.sa
+
+[PASS] C\data_structures\circular_pattern_matrix.sa
+
+[PASS] C\data_structures\concentric_squares_matrix.sa
+
+[PASS] C\data_structures\constellation_pattern_matrix.sa
+
+[PASS] C\data_structures\cosmic_microwave_background_matrix.sa
+
+[PASS] C\data_structures\cosmic_pattern_matrix.sa
+
+[PASS] C\data_structures\cosmic_web_matrix.sa
+
+[PASS] C\data_structures\cross_pattern_matrix.sa
+
+[PASS] C\data_structures\crosshatch_pattern_matrix.sa
+
+[PASS] C\data_structures\crystal_pattern_matrix.sa
+
+[PASS] C\data_structures\cyclone_pattern_matrix.sa
+
+[PASS] C\data_structures\dark_energy_matrix.sa
+
+[PASS] C\data_structures\dark_matter_matrix.sa
+
+[PASS] C\data_structures\dashed_pattern_matrix.sa
+
+[PASS] C\data_structures\diagonal_stripe_matrix.sa
+
+[PASS] C\data_structures\diamond_pattern_matrix.sa
+
+[PASS] C\data_structures\dimension_portal_matrix.sa
+
+[PASS] C\data_structures\dotted_pattern_matrix.sa
+
+[PASS] C\data_structures\emergent_spacetime_matrix.sa
+
+[PASS] C\data_structures\event_horizon_matrix.sa
+
+[PASS] C\data_structures\fireworks_pattern_matrix.sa
+
+[PASS] C\data_structures\floral_pattern_matrix.sa
+
+[PASS] C\data_structures\fractal_pattern_matrix.sa
+
+[PASS] C\data_structures\frame_pattern_matrix.sa
+
+[PASS] C\data_structures\galaxy_pattern_matrix.sa
+
+[PASS] C\data_structures\gamma_ray_burst_matrix.sa
+
+[PASS] C\data_structures\geometric_pattern_matrix.sa
+
+[PASS] C\data_structures\gravitational_lens_matrix.sa
+
+[PASS] C\data_structures\gravitational_wave_matrix.sa
+
+[PASS] C\data_structures\grid_pattern_matrix.sa
+
+[PASS] C\data_structures\gridlock_pattern_matrix.sa
+
+[PASS] C\data_structures\hawking_radiation_matrix.sa
+
+[PASS] C\data_structures\heart_pattern_matrix.sa
+
+[PASS] C\data_structures\herringbone_pattern_matrix.sa
+
+[PASS] C\data_structures\hollow_square_matrix.sa
+
+[PASS] C\data_structures\hollow_triangle_matrix.sa
+
+[PASS] C\data_structures\holographic_pattern_matrix.sa
+
+[PASS] C\data_structures\holographic_principle_matrix.sa
+
+[PASS] C\data_structures\honeycomb_pattern_matrix.sa
+
+[PASS] C\data_structures\horizontal_flip_matrix.sa
+
+[PASS] C\data_structures\horizontal_stripe_matrix.sa
+
+[PASS] C\data_structures\hourglass_pattern_matrix.sa
+
+[PASS] C\data_structures\hurricane_pattern_matrix.sa
+
+[PASS] C\data_structures\hypernova_matrix.sa
+
+[PASS] C\data_structures\hyperspace_matrix.sa
+
+[PASS] C\data_structures\identity_matrix_checker.sa
+
+[PASS] C\data_structures\information_paradox_matrix.sa
+
+[PASS] C\data_structures\interlocking_pattern_matrix.sa
+
+[PASS] C\data_structures\inverse_pyramid_matrix.sa
+
+[PASS] C\data_structures\kaleidoscope_pattern_matrix.sa
+
+[PASS] C\data_structures\l_pattern_matrix.sa
+
+[PASS] C\data_structures\lattice_pattern_matrix.sa
+
+[PASS] C\data_structures\linked list.sa
+
+[PASS] C\data_structures\loop_quantum_gravity_matrix.sa
+
+[PASS] C\data_structures\lower_triangular_matrix.sa
+
+[PASS] C\data_structures\m_theory_matrix.sa
+
+[PASS] C\data_structures\magnetar_matrix.sa
+
+[PASS] C\data_structures\mandala_pattern_matrix.sa
+
+[PASS] C\data_structures\matrix_anti_diagonal_sum.sa
+
+[PASS] C\data_structures\matrix_diagonal.sa
+
+[PASS] C\data_structures\matrix_diagonal_sum.sa
+
+[PASS] C\data_structures\matrix_max_element.sa
+
+[PASS] C\data_structures\matrix_min_element.sa
+
+[PASS] C\data_structures\matrix_sum.sa
+
+[PASS] C\data_structures\matrix_symmetry.sa
+
+[PASS] C\data_structures\matrix_transpose.sa
+
+[PASS] C\data_structures\maze_pattern_matrix.sa
+
+[PASS] C\data_structures\mesh_pattern_matrix.sa
+
+[PASS] C\data_structures\moire_pattern_matrix.sa
+
+[PASS] C\data_structures\mosaic_pattern_matrix.sa
+
+[PASS] C\data_structures\multiverse_matrix.sa
+
+[PASS] C\data_structures\nebula_pattern_matrix.sa
+
+[PASS] C\data_structures\network_pattern_matrix.sa
+
+[PASS] C\data_structures\neutron_star_matrix.sa
+
+[PASS] C\data_structures\non_commutative_geometry_matrix.sa
+
+[PASS] C\data_structures\optical_illusion_matrix.sa
+
+[PASS] C\data_structures\overlapping_pattern_matrix.sa
+
+[PASS] C\data_structures\paisley_pattern_matrix.sa
+
+[PASS] C\data_structures\parallel_universe_matrix.sa
+
+[PASS] C\data_structures\patchwork_pattern_matrix.sa
+
+[PASS] C\data_structures\plaid_pattern_matrix.sa
+
+[PASS] C\data_structures\plus_pattern_matrix.sa
+
+[PASS] C\data_structures\pulsar_matrix.sa
+
+[PASS] C\data_structures\pyramid_pattern_matrix.sa
+
+[PASS] C\data_structures\quantum_agriculture_matrix.sa
+
+[PASS] C\data_structures\quantum_algorithms_matrix.sa
+
+[PASS] C\data_structures\quantum_analytics_matrix.sa
+
+[PASS] C\data_structures\quantum_artificial_intelligence_matrix.sa
+
+[PASS] C\data_structures\quantum_banking_matrix.sa
+
+[PASS] C\data_structures\quantum_biology_matrix.sa
+
+[PASS] C\data_structures\quantum_chemistry_matrix.sa
+
+[PASS] C\data_structures\quantum_climate_matrix.sa
+
+[PASS] C\data_structures\quantum_cloud_computing_matrix.sa
+
+[PASS] C\data_structures\quantum_coherence_matrix.sa
+
+[PASS] C\data_structures\quantum_collaboration_matrix.sa
+
+[PASS] C\data_structures\quantum_communication_matrix.sa
+
+[PASS] C\data_structures\quantum_computing_matrix.sa
+
+[PASS] C\data_structures\quantum_consciousness_matrix.sa
+
+[PASS] C\data_structures\quantum_consulting_matrix.sa
+
+[PASS] C\data_structures\quantum_control_matrix.sa
+
+[PASS] C\data_structures\quantum_cryptography_matrix.sa
+
+[PASS] C\data_structures\quantum_dashboard_matrix.sa
+
+[PASS] C\data_structures\quantum_decoherence_matrix.sa
+
+[PASS] C\data_structures\quantum_deployment_matrix.sa
+
+[PASS] C\data_structures\quantum_development_matrix.sa
+
+[PASS] C\data_structures\quantum_economics_matrix.sa
+
+[PASS] C\data_structures\quantum_efficiency_matrix.sa
+
+[PASS] C\data_structures\quantum_energy_systems_matrix.sa
+
+[PASS] C\data_structures\quantum_engagement_matrix.sa
+
+[PASS] C\data_structures\quantum_engineering_matrix.sa
+
+[PASS] C\data_structures\quantum_entanglement_matrix.sa
+
+[PASS] C\data_structures\quantum_entanglement_networks_matrix.sa
+
+[PASS] C\data_structures\quantum_environment_matrix.sa
+
+[PASS] C\data_structures\quantum_error_correction_matrix.sa
+
+[PASS] C\data_structures\quantum_experience_matrix.sa
+
+[PASS] C\data_structures\quantum_finance_matrix.sa
+
+[PASS] C\data_structures\quantum_foam_matrix.sa
+
+[PASS] C\data_structures\quantum_gravity_matrix.sa
+
+[PASS] C\data_structures\quantum_information_theory_matrix.sa
+
+[PASS] C\data_structures\quantum_innovation_matrix.sa
+
+[PASS] C\data_structures\quantum_insurance_matrix.sa
+
+[PASS] C\data_structures\quantum_interaction_matrix.sa
+
+[PASS] C\data_structures\quantum_interface_matrix.sa
+
+[PASS] C\data_structures\quantum_interference_matrix.sa
+
+[PASS] C\data_structures\quantum_internet_matrix.sa
+
+[PASS] C\data_structures\quantum_investment_matrix.sa
+
+[PASS] C\data_structures\quantum_logistics_matrix.sa
+
+[PASS] C\data_structures\quantum_machine_learning_matrix.sa
+
+[PASS] C\data_structures\quantum_maintenance_matrix.sa
+
+[PASS] C\data_structures\quantum_management_matrix.sa
+
+[PASS] C\data_structures\quantum_manufacturing_matrix.sa
+
+[PASS] C\data_structures\quantum_materials_matrix.sa
+
+[PASS] C\data_structures\quantum_medicine_matrix.sa
+
+[PASS] C\data_structures\quantum_metrology_matrix.sa
+
+[PASS] C\data_structures\quantum_monitoring_matrix.sa
+
+[PASS] C\data_structures\quantum_nanotechnology_matrix.sa
+
+[PASS] C\data_structures\quantum_networking_matrix.sa
+
+[PASS] C\data_structures\quantum_neural_networks_matrix.sa
+
+[PASS] C\data_structures\quantum_operations_matrix.sa
+
+[PASS] C\data_structures\quantum_optimization_matrix.sa
+
+[PASS] C\data_structures\quantum_pattern_matrix.sa
+
+[PASS] C\data_structures\quantum_production_matrix.sa
+
+[PASS] C\data_structures\quantum_productivity_matrix.sa
+
+[PASS] C\data_structures\quantum_quality_control_matrix.sa
+
+[PASS] C\data_structures\quantum_real_estate_matrix.sa
+
+[PASS] C\data_structures\quantum_reporting_matrix.sa
+
+[PASS] C\data_structures\quantum_retail_matrix.sa
+
+[PASS] C\data_structures\quantum_robotics_matrix.sa
+
+[PASS] C\data_structures\quantum_sensing_matrix.sa
+
+[PASS] C\data_structures\quantum_services_matrix.sa
+
+[PASS] C\data_structures\quantum_simulation_matrix.sa
+
+[PASS] C\data_structures\quantum_solutions_matrix.sa
+
+[PASS] C\data_structures\quantum_strategy_matrix.sa
+
+[PASS] C\data_structures\quantum_superposition_matrix.sa
+
+[PASS] C\data_structures\quantum_supply_chain_matrix.sa
+
+[PASS] C\data_structures\quantum_teleportation_matrix.sa
+
+[PASS] C\data_structures\quantum_testing_matrix.sa
+
+[PASS] C\data_structures\quantum_trading_matrix.sa
+
+[PASS] C\data_structures\quantum_transportation_matrix.sa
+
+[PASS] C\data_structures\quantum_tunneling_matrix.sa
+
+[PASS] C\data_structures\quantum_visualization_matrix.sa
+
+[PASS] C\data_structures\quasar_matrix.sa
+
+[PASS] C\data_structures\quilt_pattern_matrix.sa
+
+[PASS] C\data_structures\red_giant_matrix.sa
+
+[PASS] C\data_structures\reverse_columns_matrix.sa
+
+[PASS] C\data_structures\reverse_matrix.sa
+
+[PASS] C\data_structures\reverse_rows_matrix.sa
+
+[PASS] C\data_structures\ring_pattern_matrix.sa
+
+[PASS] C\data_structures\ripple_pattern_matrix.sa
+
+[PASS] C\data_structures\rotate_matrix_180.sa
+
+[PASS] C\data_structures\rotate_matrix_270.sa
+
+[PASS] C\data_structures\rotate_matrix_90.sa
+
+[PASS] C\data_structures\singularity_matrix.sa
+
+[PASS] C\data_structures\snake_pattern_matrix.sa
+
+[PASS] C\data_structures\snowflake_pattern_matrix.sa
+
+[PASS] C\data_structures\spacetime_curvature_matrix.sa
+
+[PASS] C\data_structures\sparse_matrix_checker.sa
+
+[PASS] C\data_structures\spiral_flower_matrix.sa
+
+[PASS] C\data_structures\spiral_galaxy_matrix.sa
+
+[PASS] C\data_structures\spiral_matrix.sa
+
+[PASS] C\data_structures\spiral_shell_matrix.sa
+
+[PASS] C\data_structures\star_pattern_matrix.sa
+
+[PASS] C\data_structures\starburst_pattern_matrix.sa
+
+[PASS] C\data_structures\stargate_matrix.sa
+
+[PASS] C\data_structures\string_theory_matrix.sa
+
+[PASS] C\data_structures\subspace_matrix.sa
+
+[PASS] C\data_structures\sunburst_pattern_matrix.sa
+
+[PASS] C\data_structures\supernova_matrix.sa
+
+[PASS] C\data_structures\t_pattern_matrix.sa
+
+[PASS] C\data_structures\tile_pattern_matrix.sa
+
+[PASS] C\data_structures\time_vortex_matrix.sa
+
+[PASS] C\data_structures\tornado_pattern_matrix.sa
+
+[PASS] C\data_structures\twisted_pattern_matrix.sa
+
+[PASS] C\data_structures\twistor_theory_matrix.sa
+
+[PASS] C\data_structures\upper_triangular_matrix.sa
+
+[PASS] C\data_structures\v_pattern_matrix.sa
+
+[PASS] C\data_structures\vertical_flip_matrix.sa
+
+[PASS] C\data_structures\vertical_stripe_matrix.sa
+
+[PASS] C\data_structures\vortex_pattern_matrix.sa
+
+[PASS] C\data_structures\warp_field_matrix.sa
+
+[PASS] C\data_structures\wave_interference_matrix.sa
+
+[PASS] C\data_structures\wave_pattern_matrix.sa
+
+[PASS] C\data_structures\weave_pattern_matrix.sa
+
+[PASS] C\data_structures\web_pattern_matrix.sa
+
+[PASS] C\data_structures\whirlpool_pattern_matrix.sa
+
+[PASS] C\data_structures\white_dwarf_matrix.sa
+
+[PASS] C\data_structures\window_pattern_matrix.sa
+
+[PASS] C\data_structures\wormhole_matrix.sa
+
+[PASS] C\data_structures\x_pattern_matrix.sa
+
+[PASS] C\data_structures\z_pattern_matrix.sa
+
+[PASS] C\data_structures\zigzag_pattern_matrix.sa
+
+[PASS] C\digit_counter.sa
+
+[PASS] C\even_elements_count.sa
+
+[PASS] C\even_elements_sum.sa
+
+[PASS] C\examples\file001.sa
+
+[PASS] C\examples\file002.sa
+
+[PASS] C\examples\file003.sa
+
+[PASS] C\examples\file004.sa
+
+[PASS] C\examples\file005.sa
+
+[PASS] C\examples\pattern_triangle.sa
+
+[PASS] C\examples\wave_pattern_columns.sa
+
+[PASS] C\factorial_calculator.sa
+
+[PASS] C\fibonacci_iterative.sa
+
+[PASS] C\fibonacci_series.sa
+
+[PASS] C\gcd_calculator.sa
+
+[PASS] C\largest_digit.sa
+
+[PASS] C\lcm_calculator.sa
+
+[PASS] C\lower_triangle_elements.sa
+
+[PASS] C\lower_triangle_sum.sa
+
+[PASS] C\mathematical\armstrong_number.sa
+
+[PASS] C\mathematical\factorial.sa
+
+[PASS] C\mathematical\matrix multiplication.sa
+
+[PASS] C\mathematical\number_guessing_game.sa
+
+[PASS] C\mathematical\number_reversal.sa
+
+[PASS] C\mathematical\palindrome_number.sa
+
+[PASS] C\mathematical\perfect_number.sa
+
+[PASS] C\mathematical\power function.sa
+
+[PASS] C\max_col_sum.sa
+
+[PASS] C\max_row_sum.sa
+
+[PASS] C\negative_elements_count.sa
+
+[PASS] C\negative_elements_sum.sa
+
+[PASS] C\non_boundary_elements.sa
+
+[PASS] C\non_boundary_sum.sa
+
+[PASS] C\odd_elements_count.sa
+
+[PASS] C\odd_elements_sum.sa
+
+[PASS] C\positive_elements_count.sa
+
+[PASS] C\positive_elements_sum.sa
+
+[PASS] C\power_calculator.sa
+
+[PASS] C\prime_checker.sa
+
+[PASS] C\prime_range.sa
+
+[PASS] C\row_sums.sa
+
+[PASS] C\smallest_digit.sa
+
+[PASS] C\spiral_clockwise.sa
+
+[PASS] C\spiral_counter_clockwise.sa
+
+[PASS] C\string_operations\palindrome.sa
+
+[PASS] C\string_operations\reverse string.sa
+
+[PASS] C\string_operations\string length.sa
+
+[PASS] C\string_operations\string_reversal.sa
+
+[PASS] C\sum_of_digits.sa
+
+[PASS] C\swap_diagonals.sa
+
+[PASS] C\swap_rows_columns.sa
+
+[PASS] C\temperature_converter.sa
+
+[PASS] C\upper_triangle_elements.sa
+
+[PASS] C\upper_triangle_sum.sa
+
+[PASS] C\zero_elements_count.sa
+
+========================================================================
+Result: ALL PASSED (301/301)
+Passed : 301   Failed : 0   Total : 301

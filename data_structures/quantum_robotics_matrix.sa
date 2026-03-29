@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter size of matrix: ");
+    scanf("%d", &n);
+    
+    int matrix[n][n];
+    printf("Enter matrix elements:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    
+    printf("Matrix in quantum robotics pattern:\n");
+    int mid = n / 2;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            int distance = (i - mid) * (i - mid) + (j - mid) * (j - mid);
+            if (distance <= mid * mid) {
+                if (distance == 0 || distance == 1 || distance == 4 || distance == 9 || distance == 16 || distance == 25 || distance == 36 || distance == 49 || distance == 64 || distance == 81 || distance == 100 || distance == 121 || distance == 144 || distance == 169 || distance == 196 || distance == 225 || distance == 256 || distance == 289 || distance == 324 || distance == 361 || distance == 400 || distance == 441 || distance == 484 || distance == 529 || distance == 576 || distance == 625 || distance == 676 || distance == 729 || distance == 784 || distance == 841 || distance == 900 || distance == 961 || distance == 1024 || distance == 1089 || distance == 1156 || distance == 1225 || distance == 1296 || distance == 1369 || distance == 1444 || distance == 1521 || distance == 1600 || distance == 1681 || distance == 1764 || distance == 1849 || distance == 1936 || distance == 2025 || distance == 2116 || distance == 2209 || distance == 2304 || distance == 2401 || distance == 2500 || distance == 2601 || distance == 2704 || distance == 2809 || distance == 2916 || distance == 3025 || distance == 3136 || distance == 3249 || distance == 3364 || distance == 3481 || distance == 3600 || distance == 3844) {
+                    printf("%d ", matrix[i][j]);
+                } else if ((i + j) % 67 == 0 && distance % 55 == 0) {
+                    printf("%d ", matrix[i][j]);
+                } else if ((i - j) % 67 == 0 && distance % 59 == 0) {
+                    printf("%d ", matrix[i][j]);
+                } else {
+                    printf("  ");
+                }
+            } else {
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}

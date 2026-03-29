@@ -1,0 +1,2123 @@
+Quantum Language ‚Äî Test Results (in progress)
+Generated : 2026-03-28 22:55:36
+Directory : C:\Users\HP\OneDrive\Documents\Projects\Quantum-Language\examples\library\C\string_operations\
+Total     : 7   (running...)
+========================================================================
+
+[PASS] string_operations\palindrome.sa
+
+[PASS] string_operations\reverse string.sa
+
+[PASS] string_operations\string length.sa
+
+[FAIL] string_operations\string validation.sa
+------------------------------------------------------------------------
+Error  : TypeError: String has no method 'slice'
+
+--- Program Output ---
+  === String Validation Examples ===
+  
+  --- Testing Basic Validation Functions ---
+  String		Empty	White	Num	Alpha	Alnum
+  ------		-----	-----	---	-----
+  		true	false	false	false	false
+     		false	true	true	true	true
+  hello		false	false	true	true	true
+  12345		false	false	true	false	true
+  hello123		false	false	true	false	true
+  test@example.com		false	false	true	true	true
+  (555) 123-4567		false	false	true	false	true
+  https://www.example.com		false	false	true	true	true
+  192.168.1.1		false	false	true	false	true
+  abc123		false	false	true	false	true
+  
+  --- Testing Email Validation ---
+  Email				Valid
+  ----				-----
+--- End Output ---
+
+--- Source Code (string_operations\string validation.sa) ---
+       1 | # string_validation.sa - String Validation Examples
+       2 | # C-style string validation implementation in Quantum Language
+       3 | 
+       4 | print("=== String Validation Examples ===");
+       5 | 
+       6 | # Check if string is empty
+       7 | function is_empty(str) {
+       8 |     return len(str) == 0;
+       9 | }
+      10 | 
+      11 | # Check if string contains only whitespace
+      12 | function is_whitespace(str) {
+      13 |     if (len(str) == 0) {
+      14 |         return false;
+      15 |     }
+      16 |     
+      17 |     for (let i = 0; i < len(str); i++) {
+      18 |         let char = str[i];
+      19 |         if (char != ' ' && char != '\t' && char != '\n' && char != '\r') {
+      20 |             return false;
+      21 |         }
+      22 |     }
+      23 |     
+      24 |     return true;
+      25 | }
+      26 | 
+      27 | # Check if string is numeric (digits only)
+      28 | function is_numeric(str) {
+      29 |     if (len(str) == 0) {
+      30 |         return false;
+      31 |     }
+      32 |     
+      33 |     for (let i = 0; i < len(str); i++) {
+      34 |         let char = str[i];
+      35 |         if (char < '0' || char > '9') {
+      36 |             return false;
+      37 |         }
+      38 |     }
+      39 |     
+      40 |     return true;
+      41 | }
+      42 | 
+      43 | # Check if string is alphabetic (letters only)
+      44 | function is_alpha(str) {
+      45 |     if (len(str) == 0) {
+      46 |         return false;
+      47 |     }
+      48 |     
+      49 |     for (let i = 0; i < len(str); i++) {
+      50 |         let char = str[i];
+      51 |         if (!((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z'))) {
+      52 |             return false;
+      53 |         }
+      54 |     }
+      55 |     
+      56 |     return true;
+      57 | }
+      58 | 
+      59 | # Check if string is alphanumeric (letters and digits)
+      60 | function is_alphanumeric(str) {
+      61 |     if (len(str) == 0) {
+      62 |         return false;
+      63 |     }
+      64 |     
+      65 |     for (let i = 0; i < len(str); i++) {
+      66 |         let char = str[i];
+      67 |         if (!((char >= 'a' && char <= 'z') || 
+      68 |               (char >= 'A' && char <= 'Z') || 
+      69 |               (char >= '0' && char <= '9'))) {
+      70 |             return false;
+      71 |         }
+      72 |     }
+      73 |     
+      74 |     return true;
+      75 | }
+      76 | 
+      77 | # Check if string is a valid email address (basic validation)
+      78 | function is_email(str) {
+      79 |     if (len(str) == 0) {
+      80 |         return false;
+      81 |     }
+      82 |     
+      83 |     # Basic email validation: local@domain
+      84 |     let at_count = 0;
+      85 |     let at_pos = -1;
+      86 |     
+      87 |     # Count @ symbols and find position
+      88 |     for (let i = 0; i < len(str); i++) {
+      89 |         if (str[i] == '@') {
+      90 |             at_count++;
+      91 |             at_pos = i;
+      92 |         }
+      93 |     }
+      94 |     
+      95 |     if (at_count != 1) {
+      96 |         return false;
+      97 |     }
+      98 |     
+      99 |     # Check local part (before @)
+     100 |     let local_part = str.slice(0, at_pos);
+     101 |     if (len(local_part) == 0) {
+     102 |         return false;
+     103 |     }
+     104 |     
+     105 |     # Check domain part (after @)
+     106 |     let domain_part = str.slice(at_pos + 1);
+     107 |     if (len(domain_part) == 0) {
+     108 |         return false;
+     109 |     }
+     110 |     
+     111 |     # Domain should contain at least one dot
+     112 |     if (!domain_part.contains('.')) {
+     113 |         return false;
+     114 |     }
+     115 |     
+     116 |     # Basic character checks
+     117 |     for (let i = 0; i < len(str); i++) {
+     118 |         let char = str[i];
+     119 |         if (char == ' ' || char == '\t' || char == '\n' || char == '\r') {
+     120 |             return false;
+     121 |         }
+     122 |     }
+     123 |     
+     124 |     return true;
+     125 | }
+     126 | 
+     127 | # Check if string is a valid phone number (basic US format)
+     128 | function is_phone_number(str) {
+     129 |     if (len(str) == 0) {
+     130 |         return false;
+     131 |     }
+     132 |     
+     133 |     # Remove common separators
+     134 |     let cleaned = "";
+     135 |     for (let i = 0; i < len(str); i++) {
+     136 |         let char = str[i];
+     137 |         if (char >= '0' && char <= '9') {
+     138 |             cleaned += char;
+     139 |         }
+     140 |     }
+     141 |     
+     142 |     # Check if we have exactly 10 digits
+     143 |     return len(cleaned) == 10;
+     144 | }
+     145 | 
+     146 | # Check if string is a valid URL (basic validation)
+     147 | function is_url(str) {
+     148 |     if (len(str) == 0) {
+     149 |         return false;
+     150 |     }
+     151 |     
+     152 |     # Must contain http:// or https://
+     153 |     if (!(str.slice(0, 7) == "http://" || str.slice(0, 8) == "https://")) {
+     154 |         return false;
+     155 |     }
+     156 |     
+     157 |     # Must contain at least one dot after protocol
+     158 |     let protocol_end = str.index("://") + 3;
+     159 |     let domain = str.slice(protocol_end);
+     160 |     
+     161 |     if (len(domain) == 0 || !domain.contains('.')) {
+     162 |         return false;
+     163 |     }
+     164 |     
+     165 |     return true;
+     166 | }
+     167 | 
+     168 | # Check if string is a valid IPv4 address
+     169 | function is_ipv4(str) {
+     170 |     if (len(str) == 0) {
+     171 |         return false;
+     172 |     }
+     173 |     
+     174 |     # Split by dots
+     175 |     let parts = str.split('.');
+     176 |     
+     177 |     if (len(parts) != 4) {
+     178 |         return false;
+     179 |     }
+     180 |     
+     181 |     for (let part in parts) {
+     182 |         # Each part must be numeric
+     183 |         if (!is_numeric(part)) {
+     184 |             return false;
+     185 |         }
+     186 |         
+     187 |         # Convert to integer and check range
+     188 |         let num = parseInt(part);
+     189 |         if (num < 0 || num > 255) {
+     190 |             return false;
+     191 |         }
+     192 |         
+     193 |         # No leading zeros (except for "0")
+     194 |         if (len(part) > 1 && part[0] == '0') {
+     195 |             return false;
+     196 |         }
+     197 |     }
+     198 |     
+     199 |     return true;
+     200 | }
+     201 | 
+     202 | # Check if string matches a pattern (basic pattern matching)
+     203 | function matches_pattern(str, pattern) {
+     204 |     if (len(str) != len(pattern)) {
+     205 |         return false;
+     206 |     }
+     207 |     
+     208 |     for (let i = 0; i < len(str); i++) {
+     209 |         let pattern_char = pattern[i];
+     210 |         let str_char = str[i];
+     211 |         
+     212 |         if (pattern_char == '?') {
+     213 |             # Wildcard - matches any character
+     214 |             continue;
+     215 |         } else if (pattern_char == '*') {
+     216 |             # Not implemented in this basic version
+     217 |             return false;
+     218 |         } else if (pattern_char != str_char) {
+     219 |             return false;
+     220 |         }
+     221 |     }
+     222 |     
+     223 |     return true;
+     224 | }
+     225 | 
+     226 | # Test basic validation functions
+     227 | print("\n--- Testing Basic Validation Functions ---");
+     228 | 
+     229 | let test_strings = [
+     230 |     "",
+     231 |     "   ",
+     232 |     "hello",
+     233 |     "12345",
+     234 |     "hello123",
+     235 |     "test@example.com",
+     236 |     "(555) 123-4567",
+     237 |     "https://www.example.com",
+     238 |     "192.168.1.1",
+     239 |     "abc123"
+     240 | ];
+     241 | 
+     242 | print("String\t\tEmpty\tWhite\tNum\tAlpha\tAlnum");
+     243 | print("------\t\t-----\t-----\t---\t-----");
+     244 | 
+     245 | for (let test_str in test_strings) {
+     246 |     print(test_str + "\t\t" + 
+     247 |           str(is_empty(test_str)) + "\t" + 
+     248 |           str(is_whitespace(test_str)) + "\t" + 
+     249 |           str(is_numeric(test_str)) + "\t" + 
+     250 |           str(is_alpha(test_str)) + "\t" + 
+     251 |           str(is_alphanumeric(test_str)));
+     252 | }
+     253 | 
+     254 | # Test email validation
+     255 | print("\n--- Testing Email Validation ---");
+     256 | 
+     257 | let email_tests = [
+     258 |     "user@example.com",
+     259 |     "user.name@domain.co.uk",
+     260 |     "user+tag@example.org",
+     261 |     "invalid-email",
+     262 |     "@missinglocal.com",
+     263 |     "missing@domain",
+     264 |     "user@.com",
+     265 |     "user@com.",
+     266 |     "user space@domain.com",
+     267 |     ""
+     268 | ];
+     269 | 
+     270 | print("Email\t\t\t\tValid");
+     271 | print("----\t\t\t\t-----");
+     272 | 
+     273 | for (let email in email_tests) {
+     274 |     print(email + "\t\t\t" + str(is_email(email)));
+     275 | }
+     276 | 
+     277 | # Test phone number validation
+     278 | print("\n--- Testing Phone Number Validation ---");
+     279 | 
+     280 | let phone_tests = [
+     281 |     "555-123-4567",
+     282 |     "(555) 123-4567",
+     283 |     "555.123.4567",
+     284 |     "5551234567",
+     285 |     "1-555-123-4567",
+     286 |     "555-123-456",  # Too short
+     287 |     "555-123-45678", # Too long
+     288 |     "abc-def-ghij",
+     289 |     ""
+     290 | ];
+     291 | 
+     292 | print("Phone Number\t\t\tValid");
+     293 | print("------------\t\t\t-----");
+     294 | 
+     295 | for (let phone in phone_tests) {
+     296 |     print(phone + "\t\t\t" + str(is_phone_number(phone)));
+     297 | }
+     298 | 
+     299 | # Test URL validation
+     300 | print("\n--- Testing URL Validation ---");
+     301 | 
+     302 | let url_tests = [
+     303 |     "https://www.example.com",
+     304 |     "http://example.org",
+     305 |     "https://subdomain.example.co.uk",
+     306 |     "ftp://example.com",  # Invalid protocol
+     307 |     "www.example.com",  # Missing protocol
+     308 |     "https://",          # Missing domain
+     309 |     "example.com",       # Missing protocol
+     310 |     ""
+     311 | ];
+     312 | 
+     313 | print("URL\t\t\t\tValid");
+     314 | print("---\t\t\t\t-----");
+     315 | 
+     316 | for (let url in url_tests) {
+     317 |     print(url + "\t\t\t" + str(is_url(url)));
+     318 | }
+     319 | 
+     320 | # Test IPv4 validation
+     321 | print("\n--- Testing IPv4 Validation ---");
+     322 | 
+     323 | let ip_tests = [
+     324 |     "192.168.1.1",
+     325 |     "10.0.0.1",
+     326 |     "255.255.255.255",
+     327 |     "0.0.0.0",
+     328 |     "256.1.1.1",    # Invalid octet
+     329 |     "192.168.1",     # Missing octet
+     330 |     "192.168.1.1.1", # Extra octet
+     331 |     "192.168.01.1",  # Leading zero
+     332 |     "abc.def.ghi.jkl",
+     333 |     ""
+     334 | ];
+     335 | 
+     336 | print("IP Address\t\tValid");
+     337 | print("----------\t\t-----");
+     338 | 
+     339 | for (let ip in ip_tests) {
+     340 |     print(ip + "\t\t" + str(is_ipv4(ip)));
+     341 | }
+     342 | 
+     343 | # Test pattern matching
+     344 | print("\n--- Testing Pattern Matching ---");
+     345 | 
+     346 | let pattern_tests = [
+     347 |     ["hello", "h?llo"],
+     348 |     ["world", "w?r?d"],
+     349 |     ["test", "????"],
+     350 |     ["abc", "???"],
+     351 |     ["abcd", "???"],
+     352 |     ["123", "???"],
+     353 |     ["xyz", "???"]
+     354 | ];
+     355 | 
+     356 | print("String\tPattern\tMatch");
+     357 | print("------\t-------\t-----");
+     358 | 
+     359 | for (let test in pattern_tests) {
+     360 |     let test_str = test[0];
+     361 |     let pattern = test[1];
+     362 |     print(test_str + "\t" + pattern + "\t" + str(matches_pattern(test_str, pattern)));
+     363 | }
+     364 | 
+     365 | # Advanced validation functions
+     366 | print("\n--- Advanced Validation Functions ---");
+     367 | 
+     368 | # Check password strength
+     369 | function check_password_strength(password) {
+     370 |     if (len(password) == 0) {
+     371 |         return {"strength": "none", "score": 0};
+     372 |     }
+     373 |     
+     374 |     let score = 0;
+     375 |     let feedback = [];
+     376 |     
+     377 |     # Length check
+     378 |     if (len(password) >= 8) {
+     379 |         score += 2;
+     380 |     } else {
+     381 |         feedback.push("Password should be at least 8 characters");
+     382 |     }
+     383 |     
+     384 |     # Contains lowercase
+     385 |     let has_lower = false;
+     386 |     let has_upper = false;
+     387 |     let has_digit = false;
+     388 |     let has_special = false;
+     389 |     
+     390 |     for (let i = 0; i < len(password); i++) {
+     391 |         let char = password[i];
+     392 |         if (char >= 'a' && char <= 'z') {
+     393 |             has_lower = true;
+     394 |         } else if (char >= 'A' && char <= 'Z') {
+     395 |             has_upper = true;
+     396 |         } else if (char >= '0' && char <= '9') {
+     397 |             has_digit = true;
+     398 |         } else {
+     399 |             has_special = true;
+     400 |         }
+     401 |     }
+     402 |     
+     403 |     if (has_lower) {
+     404 |         score += 1;
+     405 |     } else {
+     406 |         feedback.push("Password should contain lowercase letters");
+     407 |     }
+     408 |     
+     409 |     if (has_upper) {
+     410 |         score += 1;
+     411 |     } else {
+     412 |         feedback.push("Password should contain uppercase letters");
+     413 |     }
+     414 |     
+     415 |     if (has_digit) {
+     416 |         score += 1;
+     417 |     } else {
+     418 |         feedback.push("Password should contain digits");
+     419 |     }
+     420 |     
+     421 |     if (has_special) {
+     422 |         score += 1;
+     423 |     } else {
+     424 |         feedback.push("Password should contain special characters");
+     425 |     }
+     426 |     
+     427 |     # Determine strength
+     428 |     let strength;
+     429 |     if (score >= 5) {
+     430 |         strength = "very strong";
+     431 |     } else if (score >= 4) {
+     432 |         strength = "strong";
+     433 |     } else if (score >= 3) {
+     434 |         strength = "moderate";
+     435 |     } else if (score >= 2) {
+     436 |         strength = "weak";
+     437 |     } else {
+     438 |         strength = "very weak";
+     439 |     }
+     440 |     
+     441 |     return {
+     442 |         "strength": strength,
+     443 |         "score": score,
+     444 |         "feedback": feedback
+     445 |     };
+     446 | }
+     447 | 
+     448 | # Test password strength
+     449 | let password_tests = [
+     450 |     "password",
+     451 |     "Password",
+     452 |     "Password123",
+     453 |     "P@ssw0rd!",
+     454 |     "123",
+     455 |     "aB1!",
+     456 |     "VeryStrongPassword123!"
+     457 | ];
+     458 | 
+     459 | print("Password\t\t\tStrength\tScore");
+     460 | print("--------\t\t\t--------\t-----");
+     461 | 
+     462 | for (let password in password_tests) {
+     463 |     let result = check_password_strength(password);
+     464 |     print(password + "\t\t\t" + result.strength + "\t" + str(result.score));
+     465 | }
+     466 | 
+     467 | # Credit card validation (Luhn algorithm)
+     468 | function is_valid_credit_card(card_number) {
+     469 |     # Remove spaces and dashes
+     470 |     let cleaned = "";
+     471 |     for (let i = 0; i < len(card_number); i++) {
+     472 |         let char = card_number[i];
+     473 |         if (char >= '0' && char <= '9') {
+     474 |             cleaned += char;
+     475 |         }
+     476 |     }
+     477 |     
+     478 |     if (len(cleaned) < 13 || len(cleaned) > 19) {
+     479 |         return false;
+     480 |     }
+     481 |     
+     482 |     # Luhn algorithm
+     483 |     let sum = 0;
+     484 |     let double_digit = false;
+     485 |     
+     486 |     for (let i = len(cleaned) - 1; i >= 0; i--) {
+     487 |         let digit = parseInt(cleaned[i]);
+     488 |         
+     489 |         if (double_digit) {
+     490 |             digit *= 2;
+     491 |             if (digit > 9) {
+     492 |                 digit = digit - 9;
+     493 |             }
+     494 |         }
+     495 |         
+     496 |         sum += digit;
+     497 |         double_digit = !double_digit;
+     498 |     }
+     499 |     
+     500 |     return sum % 10 == 0;
+     501 | }
+     502 | 
+     503 | # Test credit card validation
+     504 | print("\n--- Testing Credit Card Validation ---");
+     505 | 
+     506 | let card_tests = [
+     507 |     "4539 1488 0343 6467",  # Valid Visa
+     508 |     "6011 1111 1111 1117",  # Valid Discover
+     509 |     "378282246310005",      # Valid Amex
+     510 |     "5555-5555-5555-4444",  # Valid Mastercard
+     511 |     "1234 5678 9012 3456",  # Invalid
+     512 |     "4111 1111 1111 1111",  # Valid Visa
+     513 |     ""
+     514 | ];
+     515 | 
+     516 | print("Card Number\t\t\tValid");
+     517 | print("-----------\t\t\t-----");
+     518 | 
+     519 | for (let card in card_tests) {
+     520 |     print(card + "\t\t\t" + str(is_valid_credit_card(card)));
+     521 | }
+     522 | 
+     523 | # String validation class
+     524 | print("\n--- String Validation Class ---");
+     525 | 
+     526 | class StringValidator {
+     527 |     constructor() {
+     528 |         this.validation_history = [];
+     529 |     }
+     530 |     
+     531 |     # Validate with custom rules
+     532 |     validate(str, rules) {
+     533 |         let results = {};
+     534 |         
+     535 |         for (let rule_name in rules) {
+     536 |             let rule = rules[rule_name];
+     537 |             let result = false;
+     538 |             
+     539 |             if (rule == "required") {
+     540 |                 result = !is_empty(str);
+     541 |             } else if (rule == "numeric") {
+     542 |                 result = is_numeric(str);
+     543 |             } else if (rule == "alpha") {
+     544 |                 result = is_alpha(str);
+     545 |             } else if (rule == "alphanumeric") {
+     546 |                 result = is_alphanumeric(str);
+     547 |             } else if (rule == "email") {
+     548 |                 result = is_email(str);
+     549 |             } else if (rule == "phone") {
+     550 |                 result = is_phone_number(str);
+     551 |             } else if (rule == "url") {
+     552 |                 result = is_url(str);
+     553 |             } else if (rule.slice(0, 11) == "min_length:") {
+     554 |                 let min_len = parseInt(rule.split(":")[1]);
+     555 |                 result = len(str) >= min_len;
+     556 |             } else if (rule.slice(0, 11) == "max_length:") {
+     557 |                 let max_len = parseInt(rule.split(":")[1]);
+     558 |                 result = len(str) <= max_len;
+     559 |             }
+     560 |             
+     561 |             results[rule_name] = result;
+     562 |         }
+     563 |         
+     564 |         # Record validation
+     565 |         this.validation_history.push({
+     566 |             "input_text": str,
+     567 |             "rules": rules,
+     568 |             "results": results,
+     569 |             "timestamp": time()
+     570 |         });
+     571 |         
+     572 |         return results;
+     573 |     }
+     574 |     
+     575 |     # Get validation history
+     576 |     get_history() {
+     577 |         return this.validation_history;
+     578 |     }
+     579 |     
+     580 |     # Clear history
+     581 |     clear_history() {
+     582 |         this.validation_history = [];
+     583 |         print("Validation history cleared");
+     584 |     }
+     585 | }
+     586 | 
+     587 | # Test validation class
+     588 | let validator = StringValidator();
+     589 | 
+     590 | print("Testing StringValidator:");
+     591 | let validation_rules = {
+     592 |     "not_empty": "required",
+     593 |     "is_email": "email",
+     594 |     "min_length_5": "min_length:5"
+     595 | };
+     596 | 
+     597 | let test_inputs = ["", "test", "test@example.com", "a@b.c"];
+     598 | 
+     599 | for (let test_input in test_inputs) {
+     600 |     let results = validator.validate(test_input, validation_rules);
+     601 |     print("Test Input:", test_input, "Results:", results);
+     602 | }
+     603 | 
+     604 | # Form validation example
+     605 | print("\n--- Form Validation Example ---");
+     606 | 
+     607 | function validate_registration_form(data) {
+     608 |     let errors = [];
+     609 |     
+     610 |     # Validate name
+     611 |     if (is_empty(data.name)) {
+     612 |         errors.push("Name is required");
+     613 |     } else if (!is_alpha(data.name.replace(" ", ""))) {
+     614 |         errors.push("Name should contain only letters");
+     615 |     } else if (len(data.name) < 2) {
+     616 |         errors.push("Name should be at least 2 characters");
+     617 |     }
+     618 |     
+     619 |     # Validate email
+     620 |     if (is_empty(data.email)) {
+     621 |         errors.push("Email is required");
+     622 |     } else if (!is_email(data.email)) {
+     623 |         errors.push("Invalid email format");
+     624 |     }
+     625 |     
+     626 |     # Validate age
+     627 |     if (is_empty(data.age)) {
+     628 |         errors.push("Age is required");
+     629 |     } else if (!is_numeric(data.age)) {
+     630 |         errors.push("Age should be a number");
+     631 |     } else {
+     632 |         let age = parseInt(data.age);
+     633 |         if (age < 18 || age > 120) {
+     634 |             errors.push("Age should be between 18 and 120");
+     635 |         }
+     636 |     }
+     637 |     
+     638 |     # Validate phone
+     639 |     if (!is_empty(data.phone) && !is_phone_number(data.phone)) {
+     640 |         errors.push("Invalid phone number format");
+     641 |     }
+     642 |     
+     643 |     return errors;
+     644 | }
+     645 | 
+     646 | # Test form validation
+     647 | let form_data = {
+     648 |     "name": "John Doe",
+     649 |     "email": "john@example.com",
+     650 |     "age": "25",
+     651 |     "phone": "(555) 123-4567"
+     652 | };
+     653 | 
+     654 | let form_errors = validate_registration_form(form_data);
+     655 | 
+     656 | if (len(form_errors) == 0) {
+     657 |     print("Form validation passed!");
+     658 | } else {
+     659 |     print("Form validation errors:");
+     660 |     for (let error in form_errors) {
+     661 |         print("  -", error);
+     662 |     }
+     663 | }
+     664 | 
+     665 | # Performance test
+     666 | print("\n--- Performance Test ---");
+     667 | 
+     668 | function performance_test() {
+     669 |     let test_string = "The quick brown fox jumps over the lazy dog";
+     670 |     let iterations = 10000;
+     671 |     
+     672 |     # Test is_numeric
+     673 |     let start_time = time();
+     674 |     for (let i = 0; i < iterations; i++) {
+     675 |         is_numeric(test_string);
+     676 |     }
+     677 |     let numeric_time = time() - start_time;
+     678 |     
+     679 |     # Test is_alpha
+     680 |     start_time = time();
+     681 |     for (let i = 0; i < iterations; i++) {
+     682 |         is_alpha(test_string);
+     683 |     }
+     684 |     let alpha_time = time() - start_time;
+     685 |     
+     686 |     # Test is_alphanumeric
+     687 |     start_time = time();
+     688 |     for (let i = 0; i < iterations; i++) {
+     689 |         is_alphanumeric(test_string);
+     690 |     }
+     691 |     let alphanumeric_time = time() - start_time;
+     692 |     
+     693 |     print("Performance test with", iterations, "iterations:");
+     694 |     print("is_numeric:", numeric_time, "seconds");
+     695 |     print("is_alpha:", alpha_time, "seconds");
+     696 |     print("is_alphanumeric:", alphanumeric_time, "seconds");
+     697 | }
+     698 | 
+     699 | performance_test();
+     700 | 
+     701 | print("\nString validation examples completed!");
+--- End Source ---
+
+========================================================================
+
+[PASS] string_operations\string_reversal.sa
+
+[FAIL] string_operations\text encryption.sa
+------------------------------------------------------------------------
+Error  : TypeError: Cannot call value of type nil
+Line   : 156
+
+--- Program Output ---
+  === Text Encryption Examples ===
+  
+  --- Testing Basic Encryption Functions ---
+  Plaintext: Hello World! This is a secret message.
+  
+  Caesar Cipher (shift 3):
+  Encrypted: KhoorWZruogXWWklvWlvWdWvhfuhwWphvvdjhK
+  Decrypted: HelloTWorldUTThisTisTaTsecretTmessageH
+  
+  ROT13:
+  Encrypted: UryybadbeyqHaauvfavfanafrpergazrffntrU
+  Decrypted: bellonqorldUnnhisnisnansecretnmessageb
+  
+  Atbash Cipher:
+  Encrypted: ìvoolªÑliow∫ªásrhªrhªzªhvxivgªnvhhztv≠
+  Decrypted: Hello World! This is a secret message.
+  
+  Vigen√®re Cipher (key 'secret'):
+  Encrypted: ZincsMistchNLXjzwMawVrXlwgtvxMeiujezwL
+  Decrypted: belloTqorldUTnhisTisnansecretTmessageb
+  
+  XOR Cipher (key 'key'):
+  Encrypted: # 
+  Y<
+  XK1YY
+  E
+  Y 
+  K
+  Decrypted: Hello World! This is a secret message.
+  
+  Substitution Cipher:
+--- End Output ---
+
+--- Source Code (string_operations\text encryption.sa) ---
+       1 | # text_encryption.sa - Text Encryption Examples
+       2 | # C-style text encryption implementation in Quantum Language
+       3 | 
+       4 | print("=== Text Encryption Examples ===");
+       5 | 
+       6 | # Caesar Cipher
+       7 | function caesar_cipher_encrypt(text, shift) {
+       8 |     let result = "";
+       9 |     
+      10 |     for (let i = 0; i < len(text); i++) {
+      11 |         let char = text[i];
+      12 |         
+      13 |         if (char >= 'a' && char <= 'z') {
+      14 |             let shifted = (char.charCodeAt() - 97 + shift) % 26 + 97;
+      15 |             result += chr(shifted);
+      16 |         } else if (char >= 'A' && char <= 'Z') {
+      17 |             let shifted = (char.charCodeAt() - 65 + shift) % 26 + 65;
+      18 |             result += chr(shifted);
+      19 |         } else {
+      20 |             result += char;
+      21 |         }
+      22 |     }
+      23 |     
+      24 |     return result;
+      25 | }
+      26 | 
+      27 | function caesar_cipher_decrypt(text, shift) {
+      28 |     return caesar_cipher_encrypt(text, -shift);
+      29 | }
+      30 | 
+      31 | # ROT13 (special case of Caesar cipher)
+      32 | function rot13(text) {
+      33 |     return caesar_cipher_encrypt(text, 13);
+      34 | }
+      35 | 
+      36 | # Atbash Cipher
+      37 | function atbash_cipher(text) {
+      38 |     let result = "";
+      39 |     
+      40 |     for (let i = 0; i < len(text); i++) {
+      41 |         let char = text[i];
+      42 |         
+      43 |         if (char >= 'a' && char <= 'z') {
+      44 |             let reversed = 122 - (char.charCodeAt() - 97);
+      45 |             result += chr(reversed);
+      46 |         } else if (char >= 'A' && char <= 'Z') {
+      47 |             let reversed = 90 - (char.charCodeAt() - 65);
+      48 |             result += chr(reversed);
+      49 |         } else {
+      50 |             result += char;
+      51 |         }
+      52 |     }
+      53 |     
+      54 |     return result;
+      55 | }
+      56 | 
+      57 | # Vigen√®re Cipher
+      58 | function vigenere_encrypt(text, key) {
+      59 |     let result = "";
+      60 |     let key_index = 0;
+      61 |     
+      62 |     for (let i = 0; i < len(text); i++) {
+      63 |         let char = text[i];
+      64 |         
+      65 |         if (char >= 'a' && char <= 'z') {
+      66 |             let text_char = char.charCodeAt() - 97;
+      67 |             let key_char = key[key_index % len(key)].charCodeAt() - 97;
+      68 |             let encrypted = (text_char + key_char) % 26 + 97;
+      69 |             result += chr(encrypted);
+      70 |             key_index++;
+      71 |         } else if (char >= 'A' && char <= 'Z') {
+      72 |             let text_char = char.charCodeAt() - 65;
+      73 |             let key_char = key[key_index % len(key)].upper().charCodeAt() - 65;
+      74 |             let encrypted = (text_char + key_char) % 26 + 65;
+      75 |             result += chr(encrypted);
+      76 |             key_index++;
+      77 |         } else {
+      78 |             result += char;
+      79 |         }
+      80 |     }
+      81 |     
+      82 |     return result;
+      83 | }
+      84 | 
+      85 | function vigenere_decrypt(text, key) {
+      86 |     let result = "";
+      87 |     let key_index = 0;
+      88 |     
+      89 |     for (let i = 0; i < len(text); i++) {
+      90 |         let char = text[i];
+      91 |         
+      92 |         if (char >= 'a' && char <= 'z') {
+      93 |             let text_char = char.charCodeAt() - 97;
+      94 |             let key_char = key[key_index % len(key)].charCodeAt() - 97;
+      95 |             let decrypted = (text_char - key_char + 26) % 26 + 97;
+      96 |             result += chr(decrypted);
+      97 |             key_index++;
+      98 |         } else if (char >= 'A' && char <= 'Z') {
+      99 |             let text_char = char.charCodeAt() - 65;
+     100 |             let key_char = key[key_index % len(key)].upper().charCodeAt() - 65;
+     101 |             let decrypted = (text_char - key_char + 26) % 26 + 65;
+     102 |             result += chr(decrypted);
+     103 |             key_index++;
+     104 |         } else {
+     105 |             result += char;
+     106 |         }
+     107 |     }
+     108 |     
+     109 |     return result;
+     110 | }
+     111 | 
+     112 | # XOR Cipher
+     113 | function xor_cipher(text, key) {
+     114 |     let result = "";
+     115 |     
+     116 |     for (let i = 0; i < len(text); i++) {
+     117 |         let text_char = text.charCodeAt(i);
+     118 |         let key_char = key.charCodeAt(i % len(key));
+     119 |         let encrypted = text_char ^ key_char;
+     120 |         result += chr(encrypted);
+     121 |     }
+     122 |     
+     123 |     return result;
+     124 | }
+     125 | 
+     126 | # Simple substitution cipher
+     127 | function substitution_encrypt(text, substitution_map) {
+     128 |     let result = "";
+     129 |     
+     130 |     for (let i = 0; i < len(text); i++) {
+     131 |         let char = text[i];
+     132 |         let lower_char = char.lower();
+     133 |         
+     134 |         if (substitution_map[lower_char] != null) {
+     135 |             let encrypted = substitution_map[lower_char];
+     136 |             # Preserve case
+     137 |             if (char >= 'A' && char <= 'Z') {
+     138 |                 result += encrypted.upper();
+     139 |             } else {
+     140 |                 result += encrypted;
+     141 |             }
+     142 |         } else {
+     143 |             result += char;
+     144 |         }
+     145 |     }
+     146 |     
+     147 |     return result;
+     148 | }
+     149 | 
+     150 | function create_substitution_map() {
+     151 |     let alphabet = "abcdefghijklmnopqrstuvwxyz";
+     152 |     let shuffled = alphabet.split("");
+     153 |     
+     154 |     # Fisher-Yates shuffle
+     155 |     for (let i = len(shuffled) - 1; i > 0; i--) {
+>>>  156 |         let j = randint(0, i);
+     157 |         let temp = shuffled[i];
+     158 |         shuffled[i] = shuffled[j];
+     159 |         shuffled[j] = temp;
+     160 |     }
+     161 |     
+     162 |     let substitution_map = {};
+     163 |     for (let i = 0; i < len(alphabet); i++) {
+     164 |         substitution_map[alphabet[i]] = shuffled[i];
+     165 |     }
+     166 |     
+     167 |     return substitution_map;
+     168 | }
+     169 | 
+     170 | # Test basic encryption functions
+     171 | print("\n--- Testing Basic Encryption Functions ---");
+     172 | 
+     173 | let plaintext = "Hello World! This is a secret message.";
+     174 | print("Plaintext:", plaintext);
+     175 | 
+     176 | print("\nCaesar Cipher (shift 3):");
+     177 | let caesar_encrypted = caesar_cipher_encrypt(plaintext, 3);
+     178 | print("Encrypted:", caesar_encrypted);
+     179 | let caesar_decrypted = caesar_cipher_decrypt(caesar_encrypted, 3);
+     180 | print("Decrypted:", caesar_decrypted);
+     181 | 
+     182 | print("\nROT13:");
+     183 | let rot13_encrypted = rot13(plaintext);
+     184 | print("Encrypted:", rot13_encrypted);
+     185 | let rot13_decrypted = rot13(rot13_encrypted);  # ROT13 is its own inverse
+     186 | print("Decrypted:", rot13_decrypted);
+     187 | 
+     188 | print("\nAtbash Cipher:");
+     189 | let atbash_encrypted = atbash_cipher(plaintext);
+     190 | print("Encrypted:", atbash_encrypted);
+     191 | let atbash_decrypted = atbash_cipher(atbash_encrypted);  # Atbash is its own inverse
+     192 | print("Decrypted:", atbash_decrypted);
+     193 | 
+     194 | print("\nVigen√®re Cipher (key 'secret'):");
+     195 | let vigenere_key = "secret";
+     196 | let vigenere_encrypted = vigenere_encrypt(plaintext, vigenere_key);
+     197 | print("Encrypted:", vigenere_encrypted);
+     198 | let vigenere_decrypted = vigenere_decrypt(vigenere_encrypted, vigenere_key);
+     199 | print("Decrypted:", vigenere_decrypted);
+     200 | 
+     201 | print("\nXOR Cipher (key 'key'):");
+     202 | let xor_key = "key";
+     203 | let xor_encrypted = xor_cipher(plaintext, xor_key);
+     204 | print("Encrypted:", xor_encrypted);
+     205 | let xor_decrypted = xor_cipher(xor_encrypted, xor_key);  # XOR is its own inverse
+     206 | print("Decrypted:", xor_decrypted);
+     207 | 
+     208 | print("\nSubstitution Cipher:");
+     209 | let sub_map = create_substitution_map();
+     210 | print("Substitution map (first 10 chars):");
+     211 | let map_keys = [];
+     212 | for (let key in sub_map) {
+     213 |     map_keys.push(key);
+     214 |     if (len(map_keys) >= 10) break;
+     215 | }
+     216 | for (let key in map_keys) {
+     217 |     print(key, "->", sub_map[key]);
+     218 | }
+     219 | 
+     220 | let sub_encrypted = substitution_encrypt(plaintext, sub_map);
+     221 | print("Encrypted:", sub_encrypted);
+     222 | 
+     223 | # Frequency analysis
+     224 | print("\n--- Frequency Analysis ---");
+     225 | 
+     226 | function analyze_frequency(text) {
+     227 |     let frequency = {};
+     228 |     let total = 0;
+     229 |     
+     230 |     for (let i = 0; i < len(text); i++) {
+     231 |         let char = text[i].lower();
+     232 |         if (char >= 'a' && char <= 'z') {
+     233 |             if (frequency[char] == null) {
+     234 |                 frequency[char] = 0;
+     235 |             }
+     236 |             frequency[char]++;
+     237 |             total++;
+     238 |         }
+     239 |     }
+     240 |     
+     241 |     # Convert to percentages
+     242 |     for (let char in frequency) {
+     243 |         frequency[char] = (frequency[char] / total * 100).toFixed(2);
+     244 |     }
+     245 |     
+     246 |     return frequency;
+     247 | }
+     248 | 
+     249 | function print_frequency_analysis(frequency, title) {
+     250 |     print(title + ":");
+     251 |     
+     252 |     # Sort by frequency
+     253 |     let sorted_chars = [];
+     254 |     for (let char in frequency) {
+     255 |         sorted_chars.push({"char": char, "freq": frequency[char]});
+     256 |     }
+     257 |     
+     258 |     sorted_chars.sort((a, b) => b.freq - a.freq);
+     259 |     
+     260 |     for (let item in sorted_chars) {
+     261 |         print("  " + item.char + ": " + item.freq + "%");
+     262 |     }
+     263 | }
+     264 | 
+     265 | let sample_text = "The quick brown fox jumps over the lazy dog. This pangram contains all letters of the alphabet.";
+     266 | let original_freq = analyze_frequency(sample_text);
+     267 | print_frequency_analysis(original_freq, "Original Text Frequency");
+     268 | 
+     269 | let encrypted_caesar = caesar_cipher_encrypt(sample_text, 5);
+     270 | let caesar_freq = analyze_frequency(encrypted_caesar);
+     271 | print_frequency_analysis(caesar_freq, "Caesar Encrypted Frequency");
+     272 | 
+     273 | # Breaking Caesar cipher (brute force)
+     274 | print("\n--- Breaking Caesar Cipher ---");
+     275 | 
+     276 | function break_caesar_cipher(ciphertext) {
+     277 |     print("Attempting to break Caesar cipher...");
+     278 |     print("Ciphertext:", ciphertext);
+     279 |     
+     280 |     for (let shift = 1; shift <= 25; shift++) {
+     281 |         let decrypted = caesar_cipher_decrypt(ciphertext, shift);
+     282 |         print("Shift", shift, ":", decrypted);
+     283 |     }
+     284 | }
+     285 | 
+     286 | let mystery_text = caesar_cipher_encrypt("Meet me at midnight", 8);
+     287 | print("\nBreaking Caesar cipher:");
+     288 | break_caesar_cipher(mystery_text);
+     289 | 
+     290 | # Advanced encryption
+     291 | print("\n--- Advanced Encryption ---");
+     292 | 
+     293 | # Rail Fence Cipher
+     294 | function rail_fence_encrypt(text, rails) {
+     295 |     if (rails <= 1) {
+     296 |         return text;
+     297 |     }
+     298 |     
+     299 |     let fence = [];
+     300 |     for (let i = 0; i < rails; i++) {
+     301 |         fence.push([]);
+     302 |     }
+     303 |     
+     304 |     let rail = 0;
+     305 |     let direction = 1;
+     306 |     
+     307 |     for (let i = 0; i < len(text); i++) {
+     308 |         fence[rail].push(text[i]);
+     309 |         
+     310 |         if (rail == 0) {
+     311 |             direction = 1;
+     312 |         } else if (rail == rails - 1) {
+     313 |             direction = -1;
+     314 |         }
+     315 |         
+     316 |         rail += direction;
+     317 |     }
+     318 |     
+     319 |     let result = "";
+     320 |     for (let i = 0; i < rails; i++) {
+     321 |         for (let j = 0; j < len(fence[i]); j++) {
+     322 |             result += fence[i][j];
+     323 |         }
+     324 |     }
+     325 |     
+     326 |     return result;
+     327 | }
+     328 | 
+     329 | function rail_fence_decrypt(ciphertext, rails) {
+     330 |     if (rails <= 1) {
+     331 |         return ciphertext;
+     332 |     }
+     333 |     
+     334 |     # Create fence pattern
+     335 |     let fence = [];
+     336 |     for (let i = 0; i < rails; i++) {
+     337 |         fence.push([]);
+     338 |     }
+     339 |     
+     340 |     let rail = 0;
+     341 |     let direction = 1;
+     342 |     
+     343 |     for (let i = 0; i < len(ciphertext); i++) {
+     344 |         fence[rail].push(null);
+     345 |         
+     346 |         if (rail == 0) {
+     347 |             direction = 1;
+     348 |         } else if (rail == rails - 1) {
+     349 |             direction = -1;
+     350 |         }
+     351 |         
+     352 |         rail += direction;
+     353 |     }
+     354 |     
+     355 |     # Fill fence with ciphertext
+     356 |     let index = 0;
+     357 |     for (let i = 0; i < rails; i++) {
+     358 |         for (let j = 0; j < len(fence[i]); j++) {
+     359 |             if (fence[i][j] == null) {
+     360 |                 fence[i][j] = ciphertext[index++];
+     361 |             }
+     362 |         }
+     363 |     }
+     364 |     
+     365 |     # Read fence in zigzag pattern
+     366 |     let result = "";
+     367 |     rail = 0;
+     368 |     direction = 1;
+     369 |     
+     370 |     for (let i = 0; i < len(ciphertext); i++) {
+     371 |         result += fence[rail].shift();
+     372 |         
+     373 |         if (rail == 0) {
+     374 |             direction = 1;
+     375 |         } else if (rail == rails - 1) {
+     376 |             direction = -1;
+     377 |         }
+     378 |         
+     379 |         rail += direction;
+     380 |     }
+     381 |     
+     382 |     return result;
+     383 | }
+     384 | 
+     385 | print("\nRail Fence Cipher:");
+     386 | let rail_text = "Hello World";
+     387 | let rail_encrypted = rail_fence_encrypt(rail_text, 3);
+     388 | print("Original:", rail_text);
+     389 | print("Encrypted (3 rails):", rail_encrypted);
+     390 | let rail_decrypted = rail_fence_decrypt(rail_encrypted, 3);
+     391 | print("Decrypted:", rail_decrypted);
+     392 | 
+     393 | # Columnar Transposition
+     394 | function columnar_encrypt(text, key) {
+     395 |     let key_length = len(key);
+     396 |     let num_columns = key_length;
+     397 |     let num_rows = (len(text) + key_length - 1) / key_length;
+     398 |     
+     399 |     # Create grid
+     400 |     let grid = [];
+     401 |     for (let i = 0; i < num_rows; i++) {
+     402 |         grid.push([]);
+     403 |         for (let j = 0; j < num_columns; j++) {
+     404 |             let index = i * num_columns + j;
+     405 |             if (index < len(text)) {
+     406 |                 grid[i].push(text[index]);
+     407 |             } else {
+     408 |                 grid[i].push(' ');
+     409 |             }
+     410 |         }
+     411 |     }
+     412 |     
+     413 |     # Determine column order based on key
+     414 |     let key_order = [];
+     415 |     for (let i = 0; i < key_length; i++) {
+     416 |         key_order.push({"char": key[i], "index": i});
+     417 |     }
+     418 |     key_order.sort((a, b) => a.char - b.char);
+     419 |     
+     420 |     # Read columns in key order
+     421 |     let result = "";
+     422 |     for (let i = 0; i < key_length; i++) {
+     423 |         let col_index = key_order[i].index;
+     424 |         for (let row = 0; row < num_rows; row++) {
+     425 |             result += grid[row][col_index];
+     426 |         }
+     427 |     }
+     428 |     
+     429 |     return result.trim();
+     430 | }
+     431 | 
+     432 | function columnar_decrypt(ciphertext, key) {
+     433 |     let key_length = len(key);
+     434 |     let num_columns = key_length;
+     435 |     let num_rows = (len(ciphertext) + key_length - 1) / key_length;
+     436 |     
+     437 |     # Determine column order based on key
+     438 |     let key_order = [];
+     439 |     for (let i = 0; i < key_length; i++) {
+     440 |         key_order.push({"char": key[i], "index": i});
+     441 |     }
+     442 |     key_order.sort((a, b) => a.char - b.char);
+     443 |     
+     444 |     # Create grid
+     445 |     let grid = [];
+     446 |     for (let i = 0; i < num_rows; i++) {
+     447 |         grid.push([]);
+     448 |         for (let j = 0; j < num_columns; j++) {
+     449 |             grid[i].push(null);
+     450 |         }
+     451 |     }
+     452 |     
+     453 |     # Fill grid with ciphertext
+     454 |     let index = 0;
+     455 |     for (let i = 0; i < key_length; i++) {
+     456 |         let col_index = key_order[i].index;
+     457 |         for (let row = 0; row < num_rows; row++) {
+     458 |             if (index < len(ciphertext)) {
+     459 |                 grid[row][col_index] = ciphertext[index++];
+     460 |             }
+     461 |         }
+     462 |     }
+     463 |     
+     464 |     # Read grid row by row
+     465 |     let result = "";
+     466 |     for (let row = 0; row < num_rows; row++) {
+     467 |         for (let col = 0; col < num_columns; col++) {
+     468 |             if (grid[row][col] != null && grid[row][col] != ' ') {
+     469 |                 result += grid[row][col];
+     470 |             }
+     471 |         }
+     472 |     }
+     473 |     
+     474 |     return result;
+     475 | }
+     476 | 
+     477 | print("\nColumnar Transposition:");
+     478 | let columnar_key = "KEY";
+     479 | let columnar_text = "HELLO WORLD";
+     480 | let columnar_encrypted = columnar_encrypt(columnar_text, columnar_key);
+     481 | print("Original:", columnar_text);
+     482 | print("Key:", columnar_key);
+     483 | print("Encrypted:", columnar_encrypted);
+     484 | let columnar_decrypted = columnar_decrypt(columnar_encrypted, columnar_key);
+     485 | print("Decrypted:", columnar_decrypted);
+     486 | 
+     487 | # Encryption utilities
+     488 | print("\n--- Encryption Utilities ---");
+     489 | 
+     490 | # Text to binary
+     491 | function text_to_binary(text) {
+     492 |     let result = "";
+     493 |     for (let i = 0; i < len(text); i++) {
+     494 |         let char_code = text.charCodeAt(i);
+     495 |         let binary = "";
+     496 |         while (char_code > 0) {
+     497 |             binary = str(char_code % 2) + binary;
+     498 |             char_code = char_code / 2;
+     499 |         }
+     500 |         # Pad to 8 bits
+     501 |         while (len(binary) < 8) {
+     502 |             binary = "0" + binary;
+     503 |         }
+     504 |         result += binary + " ";
+     505 |     }
+     506 |     return result.trim();
+     507 | }
+     508 | 
+     509 | # Binary to text
+     510 | function binary_to_text(binary) {
+     511 |     let bytes = binary.split(" ");
+     512 |     let result = "";
+     513 |     
+     514 |     for (let byte in bytes) {
+     515 |         if (byte != "") {
+     516 |             result += chr(parseInt(byte, 2));
+     517 |         }
+     518 |     }
+     519 |     
+     520 |     return result;
+     521 | }
+     522 | 
+     523 | # Hex encoding
+     524 | function text_to_hex(text) {
+     525 |     let result = "";
+     526 |     for (let i = 0; i < len(text); i++) {
+     527 |         let char_code = text.charCodeAt(i);
+     528 |         let hex = "";
+     529 |         while (char_code > 0) {
+     530 |             let remainder = char_code % 16;
+     531 |             if (remainder < 10) {
+     532 |                 hex = str(remainder) + hex;
+     533 |             } else {
+     534 |                 if (remainder == 10) hex = "a" + hex;
+     535 |                 else if (remainder == 11) hex = "b" + hex;
+     536 |                 else if (remainder == 12) hex = "c" + hex;
+     537 |                 else if (remainder == 13) hex = "d" + hex;
+     538 |                 else if (remainder == 14) hex = "e" + hex;
+     539 |                 else if (remainder == 15) hex = "f" + hex;
+     540 |             }
+     541 |             char_code = char_code / 16;
+     542 |         }
+     543 |         result += hex;
+     544 |     }
+     545 |     return result;
+     546 | }
+     547 | 
+     548 | function hex_to_text(hex) {
+     549 |     let result = "";
+     550 |     for (let i = 0; i < len(hex); i += 2) {
+     551 |         let byte = hex.slice(i, i + 2);
+     552 |         result += chr(parseInt(byte, 16));
+     553 |     }
+     554 |     return result;
+     555 | }
+     556 | 
+     557 | print("\nEncoding Examples:");
+     558 | let encoding_text = "Hello";
+     559 | print("Original:", encoding_text);
+     560 | print("Binary:", text_to_binary(encoding_text));
+     561 | print("Hex:", text_to_hex(encoding_text));
+     562 | 
+     563 | print("\nDecoding Examples:");
+     564 | let binary_data = text_to_binary(encoding_text);
+     565 | let hex_data = text_to_hex(encoding_text);
+     566 | print("Binary to text:", binary_to_text(binary_data));
+     567 | print("Hex to text:", hex_to_text(hex_data));
+     568 | 
+     569 | # Encryption strength analysis
+     570 | print("\n--- Encryption Strength Analysis ---");
+     571 | 
+     572 | function analyze_encryption_strength(original, encrypted) {
+     573 |     let original_freq = analyze_frequency(original);
+     574 |     let encrypted_freq = analyze_frequency(encrypted);
+     575 |     
+     576 |     # Calculate frequency distribution difference
+     577 |     let total_diff = 0;
+     578 |     let letters = "abcdefghijklmnopqrstuvwxyz";
+     579 |     
+     580 |     for (let letter in letters) {
+     581 |         let orig_freq = original_freq[letter] || 0;
+     582 |         let enc_freq = encrypted_freq[letter] || 0;
+     583 |         total_diff += abs(orig_freq - enc_freq);
+     584 |     }
+     585 |     
+     586 |     return {
+     587 |         "frequency_difference": total_diff,
+     588 |         "entropy": calculate_entropy(encrypted),
+     589 |         "original_length": len(original),
+     590 |         "encrypted_length": len(encrypted)
+     591 |     };
+     592 | }
+     593 | 
+     594 | function calculate_entropy(text) {
+     595 |     let frequency = {};
+     596 |     let total = 0;
+     597 |     
+     598 |     for (let i = 0; i < len(text); i++) {
+     599 |         let char = text[i];
+     600 |         if (frequency[char] == null) {
+     601 |             frequency[char] = 0;
+     602 |         }
+     603 |         frequency[char]++;
+     604 |         total++;
+     605 |     }
+     606 |     
+     607 |     let entropy = 0;
+     608 |     for (let char in frequency) {
+     609 |         let prob = frequency[char] / total;
+     610 |         entropy -= prob * log(prob) / log(2);
+     611 |     }
+     612 |     
+     613 |     return entropy;
+     614 | }
+     615 | 
+     616 | print("\nEncryption Strength Analysis:");
+     617 | let strength_analysis = analyze_encryption_strength(plaintext, caesar_encrypted);
+     618 | print("Caesar Cipher Analysis:");
+     619 | print("  Frequency difference:", strength_analysis.frequency_difference);
+     620 | print("  Entropy:", strength_analysis.entropy.toFixed(2));
+     621 | 
+     622 | let xor_analysis = analyze_encryption_strength(plaintext, xor_encrypted);
+     623 | print("\nXOR Cipher Analysis:");
+     624 | print("  Frequency difference:", xor_analysis.frequency_difference);
+     625 | print("  Entropy:", xor_analysis.entropy.toFixed(2));
+     626 | 
+     627 | # Interactive encryption tool
+     628 | print("\n--- Interactive Encryption Tool ---");
+     629 | 
+     630 | function interactive_encryption() {
+     631 |     print("Interactive Encryption Tool");
+     632 |     print("Commands: encrypt <cipher> <text> <key>, decrypt <cipher> <text> <key>, quit");
+     633 |     print("Ciphers: caesar, rot13, atbash, vigenere, xor, rail, columnar");
+     634 |     
+     635 |     while (true) {
+     636 |         let user_input = input("Enter command: ");
+     637 |         let parts = user_input.split(" ");
+     638 |         let command = parts[0].lower();
+     639 |         
+     640 |         if (command == "quit") {
+     641 |             break;
+     642 |         } else if (len(parts) >= 3) {
+     643 |             let cipher = parts[1].lower();
+     644 |             let text = parts[2];
+     645 |             let key = parts.length > 3 ? parts[3] : "";
+     646 |             
+     647 |             if (command == "encrypt") {
+     648 |                 if (cipher == "caesar") {
+     649 |                     let shift = parseInt(key) || 3;
+     650 |                     print(caesar_cipher_encrypt(text, shift));
+     651 |                 } else if (cipher == "rot13") {
+     652 |                     print(rot13(text));
+     653 |                 } else if (cipher == "atbash") {
+     654 |                     print(atbash_cipher(text));
+     655 |                 } else if (cipher == "vigenere") {
+     656 |                     if (key == "") {
+     657 |                         print("Vigen√®re cipher requires a key");
+     658 |                     } else {
+     659 |                         print(vigenere_encrypt(text, key));
+     660 |                     }
+     661 |                 } else if (cipher == "xor") {
+     662 |                     if (key == "") {
+     663 |                         print("XOR cipher requires a key");
+     664 |                     } else {
+     665 |                         print(xor_cipher(text, key));
+     666 |                     }
+     667 |                 } else {
+     668 |                     print("Unknown cipher:", cipher);
+     669 |                 }
+     670 |             } else if (command == "decrypt") {
+     671 |                 if (cipher == "caesar") {
+     672 |                     let shift = parseInt(key) || 3;
+     673 |                     print(caesar_cipher_decrypt(text, shift));
+     674 |                 } else if (cipher == "rot13") {
+     675 |                     print(rot13(text));
+     676 |                 } else if (cipher == "atbash") {
+     677 |                     print(atbash_cipher(text));
+     678 |                 } else if (cipher == "vigenere") {
+     679 |                     if (key == "") {
+     680 |                         print("Vigen√®re cipher requires a key");
+     681 |                     } else {
+     682 |                         print(vigenere_decrypt(text, key));
+     683 |                     }
+     684 |                 } else if (cipher == "xor") {
+     685 |                     if (key == "") {
+     686 |                         print("XOR cipher requires a key");
+     687 |                     } else {
+     688 |                         print(xor_cipher(text, key));
+     689 |                     }
+     690 |                 } else {
+     691 |                     print("Unknown cipher:", cipher);
+     692 |                 }
+     693 |             }
+     694 |         } else {
+     695 |             print("Invalid command format");
+     696 |         }
+     697 |     }
+     698 |     
+     699 |     print("Goodbye!");
+     700 | }
+     701 | 
+     702 | # Uncomment to run interactive mode
+     703 | # interactive_encryption();
+     704 | 
+     705 | print("\nText encryption examples completed!");
+--- End Source ---
+
+========================================================================
+
+[FAIL] string_operations\text processing.sa
+------------------------------------------------------------------------
+Error  : TypeError: String has no method 'slice'
+
+--- Program Output ---
+  === Text Processing Examples ===
+  
+  --- Testing Basic Text Processing ---
+  Original text: The quick brown fox jumps over the lazy dog. This is a sample text for testing. The dog was lazy!
+  
+  Text Statistics:
+  Characters: 97
+  Words: 1
+  Sentences: 3
+  Paragraphs: 1
+  Lines: 1
+  
+  Text Cleaning:
+  Original: The quick brown fox jumps over the lazy dog. This is a sample text for testing. The dog was lazy!
+  Remove extra whitespace: The quick brown fox jumps over the lazy dog. This is a sample text for testing. The dog was lazy!
+  Remove punctuation: The quick brown fox jumps over the lazy dog This is a sample text for testing The dog was lazy
+  Lowercase: the quick brown fox jumps over the lazy dog. this is a sample text for testing. the dog was lazy!
+  Uppercase: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG. THIS IS A SAMPLE TEXT FOR TESTING. THE DOG WAS LAZY!
+--- End Output ---
+
+--- Source Code (string_operations\text processing.sa) ---
+       1 | # text_processing.sa - Text Processing Examples
+       2 | # C-style text processing implementation in Quantum Language
+       3 | 
+       4 | print("=== Text Processing Examples ===");
+       5 | 
+       6 | # Text statistics
+       7 | function get_text_statistics(text) {
+       8 |     if (len(text) == 0) {
+       9 |         return {
+      10 |             "characters": 0,
+      11 |             "words": 0,
+      12 |             "sentences": 0,
+      13 |             "paragraphs": 0,
+      14 |             "lines": 0
+      15 |         };
+      16 |     }
+      17 |     
+      18 |     let char_count = len(text);
+      19 |     
+      20 |     # Count words
+      21 |     let words = text.split(/\s+/);
+      22 |     let word_count = 0;
+      23 |     for (let word in words) {
+      24 |         if (word.trim() != "") {
+      25 |             word_count++;
+      26 |         }
+      27 |     }
+      28 |     
+      29 |     # Count sentences (simple approach)
+      30 |     let sentence_count = 0;
+      31 |     let sentence_endings = [".", "!", "?"];
+      32 |     for (let i = 0; i < len(text); i++) {
+      33 |         if (sentence_endings.contains(text[i])) {
+      34 |             sentence_count++;
+      35 |         }
+      36 |     }
+      37 |     
+      38 |     # Count paragraphs
+      39 |     let paragraphs = text.split(/\n\s*\n/);
+      40 |     let paragraph_count = 0;
+      41 |     for (let para in paragraphs) {
+      42 |         if (para.trim() != "") {
+      43 |             paragraph_count++;
+      44 |         }
+      45 |     }
+      46 |     
+      47 |     # Count lines
+      48 |     let lines = text.split("\n");
+      49 |     let line_count = len(lines);
+      50 |     
+      51 |     return {
+      52 |         "characters": char_count,
+      53 |         "words": word_count,
+      54 |         "sentences": sentence_count,
+      55 |         "paragraphs": paragraph_count,
+      56 |         "lines": line_count
+      57 |     };
+      58 | }
+      59 | 
+      60 | # Text cleaning functions
+      61 | function remove_extra_whitespace(text) {
+      62 |     # Replace multiple spaces with single space
+      63 |     let result = text.replace(/\s+/g, " ");
+      64 |     # Trim leading and trailing whitespace
+      65 |     return result.trim();
+      66 | }
+      67 | 
+      68 | function remove_punctuation(text) {
+      69 |     let punctuation = ".,!?;:\"'()[]{}<>-";
+      70 |     let result = "";
+      71 |     
+      72 |     for (let i = 0; i < len(text); i++) {
+      73 |         let char = text[i];
+      74 |         if (!punctuation.contains(char)) {
+      75 |             result += char;
+      76 |         }
+      77 |     }
+      78 |     
+      79 |     return result;
+      80 | }
+      81 | 
+      82 | function to_lowercase(text) {
+      83 |     return text.lower();
+      84 | }
+      85 | 
+      86 | function to_uppercase(text) {
+      87 |     return text.upper();
+      88 | }
+      89 | 
+      90 | function capitalize_words(text) {
+      91 |     let words = text.split(" ");
+      92 |     let result = [];
+      93 |     
+      94 |     for (let word in words) {
+      95 |         if (len(word) > 0) {
+      96 |             let capitalized = word[0].upper() + word.slice(1).lower();
+      97 |             result.push(capitalized);
+      98 |         } else {
+      99 |             result.push(word);
+     100 |         }
+     101 |     }
+     102 |     
+     103 |     return result.join(" ");
+     104 | }
+     105 | 
+     106 | # Text search functions
+     107 | function find_all_occurrences(text, search_term, case_sensitive = true) {
+     108 |     if (!case_sensitive) {
+     109 |         text = text.lower();
+     110 |         search_term = search_term.lower();
+     111 |     }
+     112 |     
+     113 |     let occurrences = [];
+     114 |     let start = 0;
+     115 |     
+     116 |     while (true) {
+     117 |         let index = text.index(search_term);
+     118 |         if (index == -1) {
+     119 |             break;
+     120 |         }
+     121 |         
+     122 |         occurrences.push(start + index);
+     123 |         text = text.slice(index + 1);
+     124 |         start += index + 1;
+     125 |     }
+     126 |     
+     127 |     return occurrences;
+     128 | }
+     129 | 
+     130 | function count_occurrences(text, search_term, case_sensitive = true) {
+     131 |     return len(find_all_occurrences(text, search_term, case_sensitive));
+     132 | }
+     133 | 
+     134 | function replace_all(text, search_term, replacement, case_sensitive = true) {
+     135 |     if (!case_sensitive) {
+     136 |         # Simple case-insensitive replacement
+     137 |         let lower_text = text.lower();
+     138 |         let lower_search = search_term.lower();
+     139 |         let result = "";
+     140 |         let i = 0;
+     141 |         
+     142 |         while (i < len(text)) {
+     143 |             if (i + len(search_term) <= len(text) && 
+     144 |                 lower_text.slice(i, i + len(search_term)) == lower_search) {
+     145 |                 result += replacement;
+     146 |                 i += len(search_term);
+     147 |             } else {
+     148 |                 result += text[i];
+     149 |                 i++;
+     150 |             }
+     151 |         }
+     152 |         
+     153 |         return result;
+     154 |     } else {
+     155 |         # Case-sensitive replacement
+     156 |         return text.replace(search_term, replacement);
+     157 |     }
+     158 | }
+     159 | 
+     160 | # Text analysis functions
+     161 | function get_word_frequency(text) {
+     162 |     let words = text.lower().split(/\s+/);
+     163 |     let frequency = {};
+     164 |     
+     165 |     for (let word in words) {
+     166 |         word = word.trim();
+     167 |         if (word != "") {
+     168 |             # Remove punctuation from word
+     169 |             word = remove_punctuation(word);
+     170 |             
+     171 |             if (frequency[word] == null) {
+     172 |                 frequency[word] = 0;
+     173 |             }
+     174 |             frequency[word]++;
+     175 |         }
+     176 |     }
+     177 |     
+     178 |     return frequency;
+     179 | }
+     180 | 
+     181 | function get_most_common_words(text, limit = 10) {
+     182 |     let frequency = get_word_frequency(text);
+     183 |     
+     184 |     # Convert to array and sort by frequency
+     185 |     let sorted_words = [];
+     186 |     for (let word in frequency) {
+     187 |         sorted_words.push({"word": word, "count": frequency[word]});
+     188 |     }
+     189 |     
+     190 |     sorted_words.sort((a, b) => b.count - a.count);
+     191 |     
+     192 |     return sorted_words.slice(0, limit);
+     193 | }
+     194 | 
+     195 | function get_character_frequency(text) {
+     196 |     let frequency = {};
+     197 |     
+     198 |     for (let i = 0; i < len(text); i++) {
+     199 |         let char = text[i];
+     200 |         if (frequency[char] == null) {
+     201 |             frequency[char] = 0;
+     202 |         }
+     203 |         frequency[char]++;
+     204 |     }
+     205 |     
+     206 |     return frequency;
+     207 | }
+     208 | 
+     209 | # Text transformation functions
+     210 | function reverse_text(text) {
+     211 |     let result = "";
+     212 |     for (let i = len(text) - 1; i >= 0; i--) {
+     213 |         result += text[i];
+     214 |     }
+     215 |     return result;
+     216 | }
+     217 | 
+     218 | function reverse_words(text) {
+     219 |     let words = text.split(" ");
+     220 |     let reversed = [];
+     221 |     
+     222 |     for (let i = len(words) - 1; i >= 0; i--) {
+     223 |         reversed.push(words[i]);
+     224 |     }
+     225 |     
+     226 |     return reversed.join(" ");
+     227 | }
+     228 | 
+     229 | function pig_latin(text) {
+     230 |     let words = text.split(" ");
+     231 |     let result = [];
+     232 |     
+     233 |     for (let word in words) {
+     234 |         if (len(word) == 0) {
+     235 |             result.push(word);
+     236 |             continue;
+     237 |         }
+     238 |         
+     239 |         let first_char = word[0].lower();
+     240 |         let rest = word.slice(1);
+     241 |         
+     242 |         if (len(word) == 1) {
+     243 |             result.push(word + "ay");
+     244 |         } else if ("aeiou".contains(first_char)) {
+     245 |             result.push(word + "way");
+     246 |         } else {
+     247 |             result.push(rest + first_char + "ay");
+     248 |         }
+     249 |     }
+     250 |     
+     251 |     return result.join(" ");
+     252 | }
+     253 | 
+     254 | # Test basic text processing
+     255 | print("\n--- Testing Basic Text Processing ---");
+     256 | 
+     257 | let sample_text = "The quick brown fox jumps over the lazy dog. This is a sample text for testing. The dog was lazy!";
+     258 | 
+     259 | print("Original text:", sample_text);
+     260 | print("");
+     261 | 
+     262 | print("Text Statistics:");
+     263 | let stats = get_text_statistics(sample_text);
+     264 | print("Characters:", stats.characters);
+     265 | print("Words:", stats.words);
+     266 | print("Sentences:", stats.sentences);
+     267 | print("Paragraphs:", stats.paragraphs);
+     268 | print("Lines:", stats.lines);
+     269 | 
+     270 | print("\nText Cleaning:");
+     271 | print("Original:", sample_text);
+     272 | print("Remove extra whitespace:", remove_extra_whitespace(sample_text));
+     273 | print("Remove punctuation:", remove_punctuation(sample_text));
+     274 | print("Lowercase:", to_lowercase(sample_text));
+     275 | print("Uppercase:", to_uppercase(sample_text));
+     276 | print("Capitalize words:", capitalize_words(sample_text));
+     277 | 
+     278 | print("\nText Search:");
+     279 | let search_term = "the";
+     280 | print("Searching for:", search_term);
+     281 | print("Occurrences:", count_occurrences(sample_text, search_term, false));
+     282 | print("Positions:", find_all_occurrences(sample_text, search_term, false));
+     283 | print("Replace with 'a':", replace_all(sample_text, search_term, "a", false));
+     284 | 
+     285 | # Test text analysis
+     286 | print("\n--- Testing Text Analysis ---");
+     287 | 
+     288 | print("Word Frequency:");
+     289 | let word_freq = get_word_frequency(sample_text);
+     290 | for (let word in word_freq) {
+     291 |     print(word + ":", word_freq[word]);
+     292 | }
+     293 | 
+     294 | print("\nMost Common Words:");
+     295 | let common_words = get_most_common_words(sample_text, 5);
+     296 | for (let item in common_words) {
+     297 |     print(item.word + ":", item.count);
+     298 | }
+     299 | 
+     300 | print("\nCharacter Frequency:");
+     301 | let char_freq = get_character_frequency(sample_text);
+     302 | for (let char in char_freq) {
+     303 |     if (char != " ") {
+     304 |         print("'" + char + "':", char_freq[char]);
+     305 |     }
+     306 | }
+     307 | 
+     308 | # Test text transformation
+     309 | print("\n--- Testing Text Transformation ---");
+     310 | 
+     311 | print("Original:", sample_text);
+     312 | print("Reversed text:", reverse_text(sample_text));
+     313 | print("Reversed words:", reverse_words(sample_text));
+     314 | print("Pig Latin:", pig_latin(sample_text));
+     315 | 
+     316 | # Advanced text processing
+     317 | print("\n--- Advanced Text Processing ---");
+     318 | 
+     319 | # Text similarity (simple approach)
+     320 | function text_similarity(text1, text2) {
+     321 |     let words1 = get_word_frequency(text1);
+     322 |     let words2 = get_word_frequency(text2);
+     323 |     
+     324 |     let all_words = {};
+     325 |     for (let word in words1) {
+     326 |         all_words[word] = true;
+     327 |     }
+     328 |     for (let word in words2) {
+     329 |         all_words[word] = true;
+     330 |     }
+     331 |     
+     332 |     let similarity = 0;
+     333 |     let total_words = 0;
+     334 |     
+     335 |     for (let word in all_words) {
+     336 |         let count1 = words1[word] || 0;
+     337 |         let count2 = words2[word] || 0;
+     338 |         
+     339 |         similarity += min(count1, count2);
+     340 |         total_words += max(count1, count2);
+     341 |     }
+     342 |     
+     343 |     return total_words == 0 ? 1.0 : similarity / total_words;
+     344 | }
+     345 | 
+     346 | # Text summarization (extractive)
+     347 | function extract_summary(text, num_sentences = 3) {
+     348 |     let sentences = [];
+     349 |     let current = "";
+     350 |     
+     351 |     # Split into sentences
+     352 |     for (let i = 0; i < len(text); i++) {
+     353 |         current += text[i];
+     354 |         if (".!?".contains(text[i])) {
+     355 |             sentences.push(current.trim());
+     356 |             current = "";
+     357 |         }
+     358 |     }
+     359 |     
+     360 |     if (current.trim() != "") {
+     361 |         sentences.push(current.trim());
+     362 |     }
+     363 |     
+     364 |     if (len(sentences) <= num_sentences) {
+     365 |         return sentences.join(" ");
+     366 |     }
+     367 |     
+     368 |     # Score sentences by word frequency
+     369 |     let word_freq = get_word_frequency(text);
+     370 |     let sentence_scores = [];
+     371 |     
+     372 |     for (let sentence in sentences) {
+     373 |         let score = 0;
+     374 |         let sentence_words = sentence.lower().split(/\s+/);
+     375 |         
+     376 |         for (let word in sentence_words) {
+     377 |             word = remove_punctuation(word);
+     378 |             if (word_freq[word] != null) {
+     379 |                 score += word_freq[word];
+     380 |             }
+     381 |         }
+     382 |         
+     383 |         sentence_scores.push({"sentence": sentence, "score": score});
+     384 |     }
+     385 |     
+     386 |     # Sort by score and take top sentences
+     387 |     sentence_scores.sort((a, b) => b.score - a.score);
+     388 |     
+     389 |     let summary_sentences = [];
+     390 |     for (let i = 0; i < min(num_sentences, len(sentence_scores)); i++) {
+     391 |         summary_sentences.push(sentence_scores[i].sentence);
+     392 |     }
+     393 |     
+     394 |     return summary_sentences.join(" ");
+     395 | }
+     396 | 
+     397 | # Test advanced functions
+     398 | let text1 = "The quick brown fox jumps over the lazy dog.";
+     399 | let text2 = "A fast brown fox leaps over a sleepy dog.";
+     400 | 
+     401 | print("\nText Similarity:");
+     402 | print("Text 1:", text1);
+     403 | print("Text 2:", text2);
+     404 | print("Similarity:", text_similarity(text1, text2));
+     405 | 
+     406 | let long_text = "Artificial intelligence is transforming the world. Machine learning algorithms are becoming more sophisticated. Deep learning enables computers to learn from experience. Natural language processing allows machines to understand human language. Computer vision helps machines interpret visual information. These technologies are revolutionizing industries.";
+     407 | 
+     408 | print("\nText Summarization:");
+     409 | print("Original:", long_text);
+     410 | print("Summary:", extract_summary(long_text, 2));
+     411 | 
+     412 | # Text processing class
+     413 | print("\n--- Text Processing Class ---");
+     414 | 
+     415 | class TextProcessor {
+     416 |     constructor() {
+     417 |         this.original_text = "";
+     418 |         this.processed_text = "";
+     419 |         this.statistics = {};
+     420 |         this.history = [];
+     421 |     }
+     422 |     
+     423 |     # Load text
+     424 |     load_text(text) {
+     425 |         this.original_text = text;
+     426 |         this.processed_text = text;
+     427 |         this.statistics = get_text_statistics(text);
+     428 |         this.record_operation("load", text);
+     429 |     }
+     430 |     
+     431 |     # Apply transformation
+     432 |     apply_transformation(transformation, ...args) {
+     433 |         if (transformation == "clean") {
+     434 |             this.processed_text = remove_extra_whitespace(this.processed_text);
+     435 |         } else if (transformation == "lowercase") {
+     436 |             this.processed_text = to_lowercase(this.processed_text);
+     437 |         } else if (transformation == "uppercase") {
+     438 |             this.processed_text = to_uppercase(this.processed_text);
+     439 |         } else if (transformation == "capitalize") {
+     440 |             this.processed_text = capitalize_words(this.processed_text);
+     441 |         } else if (transformation == "remove_punctuation") {
+     442 |             this.processed_text = remove_punctuation(this.processed_text);
+     443 |         } else if (transformation == "reverse") {
+     444 |             this.processed_text = reverse_text(this.processed_text);
+     445 |         } else if (transformation == "replace") {
+     446 |             this.processed_text = replace_all(this.processed_text, args[0], args[1]);
+     447 |         }
+     448 |         
+     449 |         this.record_operation(transformation, args);
+     450 |     }
+     451 |     
+     452 |     # Get word frequency
+     453 |     get_word_frequency() {
+     454 |         return get_word_frequency(this.processed_text);
+     455 |     }
+     456 |     
+     457 |     # Get most common words
+     458 |     get_most_common_words(limit = 10) {
+     459 |         return get_most_common_words(this.processed_text, limit);
+     460 |     }
+     461 |     
+     462 |     # Search text
+     463 |     search(term, case_sensitive = true) {
+     464 |         return {
+     465 |             "count": count_occurrences(this.processed_text, term, case_sensitive),
+     466 |             "positions": find_all_occurrences(this.processed_text, term, case_sensitive)
+     467 |         };
+     468 |     }
+     469 |     
+     470 |     # Record operation
+     471 |     record_operation(operation, args) {
+     472 |         this.history.push({
+     473 |             "operation": operation,
+     474 |             "args": args,
+     475 |             "timestamp": time()
+     476 |         });
+     477 |     }
+     478 |     
+     479 |     # Reset to original
+     480 |     reset() {
+     481 |         this.processed_text = this.original_text;
+     482 |         this.record_operation("reset", []);
+     483 |     }
+     484 |     
+     485 |     # Get current text
+     486 |     get_text() {
+     487 |         return this.processed_text;
+     488 |     }
+     489 |     
+     490 |     # Get statistics
+     491 |     get_statistics() {
+     492 |         return get_text_statistics(this.processed_text);
+     493 |     }
+     494 |     
+     495 |     # Get history
+     496 |     get_history() {
+     497 |         return this.history;
+     498 |     }
+     499 | }
+     500 | 
+     501 | # Test text processor class
+     502 | let processor = TextProcessor();
+     503 | processor.load_text(sample_text);
+     504 | 
+     505 | print("Testing TextProcessor:");
+     506 | print("Original length:", len(processor.get_text()));
+     507 | 
+     508 | processor.apply_transformation("lowercase");
+     509 | print("After lowercase:", processor.get_text());
+     510 | 
+     511 | processor.apply_transformation("remove_punctuation");
+     512 | print("After removing punctuation:", processor.get_text());
+     513 | 
+     514 | processor.apply_transformation("clean");
+     515 | print("After cleaning:", processor.get_text());
+     516 | 
+     517 | print("\nSearch results:");
+     518 | let search_results = processor.search("lazy", false);
+     519 | print("Found 'lazy' count:", search_results.count);
+     520 | print("Positions:", search_results.positions);
+     521 | 
+     522 | print("\nMost common words:");
+     523 | let common = processor.get_most_common_words(3);
+     524 | for (let item in common) {
+     525 |     print(item.word + ":", item.count);
+     526 | }
+     527 | 
+     528 | # File processing
+     529 | print("\n--- File Processing ---");
+     530 | 
+     531 | function process_file_content(filename) {
+     532 |     let content = read_file(filename);
+     533 |     if (content != null) {
+     534 |         print("Processing file:", filename);
+     535 |         
+     536 |         let stats = get_text_statistics(content);
+     537 |         print("File statistics:");
+     538 |         print("  Characters:", stats.characters);
+     539 |         print("  Words:", stats.words);
+     540 |         print("  Lines:", stats.lines);
+     541 |         
+     542 |         let word_freq = get_word_frequency(content);
+     543 |         let most_common = get_most_common_words(content, 5);
+     544 |         
+     545 |         print("Most common words:");
+     546 |         for (let item in most_common) {
+     547 |             print("  ", item.word + ":", item.count);
+     548 |         }
+     549 |         
+     550 |         return content;
+     551 |     }
+     552 |     
+     553 |     return null;
+     554 | }
+     555 | 
+     556 | # Create a sample file for testing
+     557 | let sample_file_content = "This is a sample file.\nIt contains multiple lines.\nAnd some text to process.";
+     558 | write_file("sample_text.txt", sample_file_content);
+     559 | 
+     560 | print("Processing file content:");
+     561 | process_file_content("sample_text.txt");
+     562 | 
+     563 | # Performance test
+     564 | print("\n--- Performance Test ---");
+     565 | 
+     566 | function performance_test() {
+     567 |     let large_text = "";
+     568 |     for (let i = 0; i < 1000; i++) {
+     569 |         large_text += "This is line " + str(i) + " of the test text. ";
+     570 |     }
+     571 |     
+     572 |     let iterations = 100;
+     573 |     
+     574 |     # Test word frequency
+     575 |     let start_time = time();
+     576 |     for (let i = 0; i < iterations; i++) {
+     577 |         get_word_frequency(large_text);
+     578 |     }
+     579 |     let word_freq_time = time() - start_time;
+     580 |     
+     581 |     # Test text statistics
+     582 |     start_time = time();
+     583 |     for (let i = 0; i < iterations; i++) {
+     584 |         get_text_statistics(large_text);
+     585 |     }
+     586 |     let stats_time = time() - start_time;
+     587 |     
+     588 |     print("Performance test with", len(large_text), "characters,", iterations, "iterations:");
+     589 |     print("Word frequency:", word_freq_time, "seconds");
+     590 |     print("Text statistics:", stats_time, "seconds");
+     591 | }
+     592 | 
+     593 | performance_test();
+     594 | 
+     595 | print("\nText processing examples completed!");
+--- End Source ---
+
+========================================================================
+
+========================================================================
+Result: FAILED 3/7 files
+Passed : 4   Failed : 3   Total : 7

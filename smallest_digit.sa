@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int num, digit, min = 9;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    int original = num;
+    while (num > 0) {
+        digit = num % 10;
+        if (digit < min) min = digit;
+        num /= 10;
+    }
+    
+    printf("Smallest digit in %d is %d\n", original, min);
+    return 0;
+}

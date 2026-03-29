@@ -1,0 +1,977 @@
+Quantum Language — Test Results (in progress)
+Generated : 2026-03-28 22:49:54
+Directory : C:\Users\HP\OneDrive\Documents\Projects\Quantum-Language\examples\library\C\data_structures\
+Total     : 230   (running...)
+========================================================================
+
+[PASS] data_structures\abstract_pattern_matrix.sa
+
+[PASS] data_structures\alternating_pattern_matrix.sa
+
+[PASS] data_structures\antimatter_matrix.sa
+
+[PASS] data_structures\argyle_pattern_matrix.sa
+
+[PASS] data_structures\array_min_max.sa
+
+[PASS] data_structures\array_operations.sa
+
+[PASS] data_structures\arrow_pattern_matrix.sa
+
+[PASS] data_structures\aurora_pattern_matrix.sa
+
+[PASS] data_structures\black_hole_matrix.sa
+
+[PASS] data_structures\border_pattern_matrix.sa
+
+[PASS] data_structures\braided_pattern_matrix.sa
+
+[PASS] data_structures\brane_cosmology_matrix.sa
+
+[PASS] data_structures\brick_pattern_matrix.sa
+
+[PASS] data_structures\butterfly_pattern_matrix.sa
+
+[PASS] data_structures\causal_dynamical_triangulation_matrix.sa
+
+[PASS] data_structures\causal_set_theory_matrix.sa
+
+[PASS] data_structures\checkerboard_matrix.sa
+
+[PASS] data_structures\chessboard_pattern_matrix.sa
+
+[PASS] data_structures\chevron_pattern_matrix.sa
+
+[PASS] data_structures\circular_pattern_matrix.sa
+
+[PASS] data_structures\concentric_squares_matrix.sa
+
+[PASS] data_structures\constellation_pattern_matrix.sa
+
+[PASS] data_structures\cosmic_microwave_background_matrix.sa
+
+[PASS] data_structures\cosmic_pattern_matrix.sa
+
+[PASS] data_structures\cosmic_web_matrix.sa
+
+[PASS] data_structures\cross_pattern_matrix.sa
+
+[PASS] data_structures\crosshatch_pattern_matrix.sa
+
+[PASS] data_structures\crystal_pattern_matrix.sa
+
+[PASS] data_structures\cyclone_pattern_matrix.sa
+
+[PASS] data_structures\dark_energy_matrix.sa
+
+[PASS] data_structures\dark_matter_matrix.sa
+
+[PASS] data_structures\dashed_pattern_matrix.sa
+
+[PASS] data_structures\diagonal_stripe_matrix.sa
+
+[PASS] data_structures\diamond_pattern_matrix.sa
+
+[PASS] data_structures\dimension_portal_matrix.sa
+
+[PASS] data_structures\dotted_pattern_matrix.sa
+
+[PASS] data_structures\emergent_spacetime_matrix.sa
+
+[PASS] data_structures\event_horizon_matrix.sa
+
+[PASS] data_structures\fireworks_pattern_matrix.sa
+
+[PASS] data_structures\floral_pattern_matrix.sa
+
+[PASS] data_structures\fractal_pattern_matrix.sa
+
+[PASS] data_structures\frame_pattern_matrix.sa
+
+[PASS] data_structures\galaxy_pattern_matrix.sa
+
+[PASS] data_structures\gamma_ray_burst_matrix.sa
+
+[PASS] data_structures\geometric_pattern_matrix.sa
+
+[PASS] data_structures\gravitational_lens_matrix.sa
+
+[PASS] data_structures\gravitational_wave_matrix.sa
+
+[PASS] data_structures\grid_pattern_matrix.sa
+
+[PASS] data_structures\gridlock_pattern_matrix.sa
+
+[PASS] data_structures\hawking_radiation_matrix.sa
+
+[PASS] data_structures\heart_pattern_matrix.sa
+
+[PASS] data_structures\herringbone_pattern_matrix.sa
+
+[PASS] data_structures\hollow_square_matrix.sa
+
+[PASS] data_structures\hollow_triangle_matrix.sa
+
+[PASS] data_structures\holographic_pattern_matrix.sa
+
+[PASS] data_structures\holographic_principle_matrix.sa
+
+[PASS] data_structures\honeycomb_pattern_matrix.sa
+
+[PASS] data_structures\horizontal_flip_matrix.sa
+
+[PASS] data_structures\horizontal_stripe_matrix.sa
+
+[PASS] data_structures\hourglass_pattern_matrix.sa
+
+[PASS] data_structures\hurricane_pattern_matrix.sa
+
+[PASS] data_structures\hypernova_matrix.sa
+
+[PASS] data_structures\hyperspace_matrix.sa
+
+[PASS] data_structures\identity_matrix_checker.sa
+
+[PASS] data_structures\information_paradox_matrix.sa
+
+[PASS] data_structures\interlocking_pattern_matrix.sa
+
+[PASS] data_structures\inverse_pyramid_matrix.sa
+
+[PASS] data_structures\kaleidoscope_pattern_matrix.sa
+
+[PASS] data_structures\l_pattern_matrix.sa
+
+[PASS] data_structures\lattice_pattern_matrix.sa
+
+[PASS] data_structures\linked list.sa
+
+[PASS] data_structures\loop_quantum_gravity_matrix.sa
+
+[PASS] data_structures\lower_triangular_matrix.sa
+
+[PASS] data_structures\m_theory_matrix.sa
+
+[PASS] data_structures\magnetar_matrix.sa
+
+[PASS] data_structures\mandala_pattern_matrix.sa
+
+[PASS] data_structures\matrix_anti_diagonal_sum.sa
+
+[PASS] data_structures\matrix_diagonal.sa
+
+[PASS] data_structures\matrix_diagonal_sum.sa
+
+[PASS] data_structures\matrix_max_element.sa
+
+[PASS] data_structures\matrix_min_element.sa
+
+[PASS] data_structures\matrix_sum.sa
+
+[PASS] data_structures\matrix_symmetry.sa
+
+[PASS] data_structures\matrix_transpose.sa
+
+[PASS] data_structures\maze_pattern_matrix.sa
+
+[PASS] data_structures\mesh_pattern_matrix.sa
+
+[PASS] data_structures\moire_pattern_matrix.sa
+
+[PASS] data_structures\mosaic_pattern_matrix.sa
+
+[PASS] data_structures\multiverse_matrix.sa
+
+[PASS] data_structures\nebula_pattern_matrix.sa
+
+[PASS] data_structures\network_pattern_matrix.sa
+
+[PASS] data_structures\neutron_star_matrix.sa
+
+[PASS] data_structures\non_commutative_geometry_matrix.sa
+
+[PASS] data_structures\optical_illusion_matrix.sa
+
+[PASS] data_structures\overlapping_pattern_matrix.sa
+
+[PASS] data_structures\paisley_pattern_matrix.sa
+
+[PASS] data_structures\parallel_universe_matrix.sa
+
+[PASS] data_structures\patchwork_pattern_matrix.sa
+
+[PASS] data_structures\plaid_pattern_matrix.sa
+
+[PASS] data_structures\plus_pattern_matrix.sa
+
+[PASS] data_structures\pulsar_matrix.sa
+
+[PASS] data_structures\pyramid_pattern_matrix.sa
+
+[PASS] data_structures\quantum_agriculture_matrix.sa
+
+[PASS] data_structures\quantum_algorithms_matrix.sa
+
+[PASS] data_structures\quantum_analytics_matrix.sa
+
+[PASS] data_structures\quantum_artificial_intelligence_matrix.sa
+
+[PASS] data_structures\quantum_banking_matrix.sa
+
+[PASS] data_structures\quantum_biology_matrix.sa
+
+[PASS] data_structures\quantum_chemistry_matrix.sa
+
+[PASS] data_structures\quantum_climate_matrix.sa
+
+[PASS] data_structures\quantum_cloud_computing_matrix.sa
+
+[PASS] data_structures\quantum_coherence_matrix.sa
+
+[PASS] data_structures\quantum_collaboration_matrix.sa
+
+[PASS] data_structures\quantum_communication_matrix.sa
+
+[PASS] data_structures\quantum_computing_matrix.sa
+
+[PASS] data_structures\quantum_consciousness_matrix.sa
+
+[PASS] data_structures\quantum_consulting_matrix.sa
+
+[PASS] data_structures\quantum_control_matrix.sa
+
+[PASS] data_structures\quantum_cryptography_matrix.sa
+
+[PASS] data_structures\quantum_dashboard_matrix.sa
+
+[PASS] data_structures\quantum_decoherence_matrix.sa
+
+[PASS] data_structures\quantum_deployment_matrix.sa
+
+[PASS] data_structures\quantum_development_matrix.sa
+
+[PASS] data_structures\quantum_economics_matrix.sa
+
+[PASS] data_structures\quantum_efficiency_matrix.sa
+
+[PASS] data_structures\quantum_energy_systems_matrix.sa
+
+[PASS] data_structures\quantum_engagement_matrix.sa
+
+[PASS] data_structures\quantum_engineering_matrix.sa
+
+[PASS] data_structures\quantum_entanglement_matrix.sa
+
+[PASS] data_structures\quantum_entanglement_networks_matrix.sa
+
+[PASS] data_structures\quantum_environment_matrix.sa
+
+[PASS] data_structures\quantum_error_correction_matrix.sa
+
+[PASS] data_structures\quantum_experience_matrix.sa
+
+[PASS] data_structures\quantum_finance_matrix.sa
+
+[PASS] data_structures\quantum_foam_matrix.sa
+
+[PASS] data_structures\quantum_gravity_matrix.sa
+
+[PASS] data_structures\quantum_information_theory_matrix.sa
+
+[PASS] data_structures\quantum_innovation_matrix.sa
+
+[PASS] data_structures\quantum_insurance_matrix.sa
+
+[PASS] data_structures\quantum_interaction_matrix.sa
+
+[PASS] data_structures\quantum_interface_matrix.sa
+
+[PASS] data_structures\quantum_interference_matrix.sa
+
+[PASS] data_structures\quantum_internet_matrix.sa
+
+[PASS] data_structures\quantum_investment_matrix.sa
+
+[PASS] data_structures\quantum_logistics_matrix.sa
+
+[PASS] data_structures\quantum_machine_learning_matrix.sa
+
+[PASS] data_structures\quantum_maintenance_matrix.sa
+
+[PASS] data_structures\quantum_management_matrix.sa
+
+[PASS] data_structures\quantum_manufacturing_matrix.sa
+
+[PASS] data_structures\quantum_materials_matrix.sa
+
+[PASS] data_structures\quantum_medicine_matrix.sa
+
+[PASS] data_structures\quantum_metrology_matrix.sa
+
+[PASS] data_structures\quantum_monitoring_matrix.sa
+
+[PASS] data_structures\quantum_nanotechnology_matrix.sa
+
+[PASS] data_structures\quantum_networking_matrix.sa
+
+[PASS] data_structures\quantum_neural_networks_matrix.sa
+
+[PASS] data_structures\quantum_operations_matrix.sa
+
+[PASS] data_structures\quantum_optimization_matrix.sa
+
+[PASS] data_structures\quantum_pattern_matrix.sa
+
+[PASS] data_structures\quantum_production_matrix.sa
+
+[PASS] data_structures\quantum_productivity_matrix.sa
+
+[PASS] data_structures\quantum_quality_control_matrix.sa
+
+[PASS] data_structures\quantum_real_estate_matrix.sa
+
+[PASS] data_structures\quantum_reporting_matrix.sa
+
+[PASS] data_structures\quantum_retail_matrix.sa
+
+[PASS] data_structures\quantum_robotics_matrix.sa
+
+[PASS] data_structures\quantum_sensing_matrix.sa
+
+[PASS] data_structures\quantum_services_matrix.sa
+
+[PASS] data_structures\quantum_simulation_matrix.sa
+
+[PASS] data_structures\quantum_solutions_matrix.sa
+
+[PASS] data_structures\quantum_strategy_matrix.sa
+
+[PASS] data_structures\quantum_superposition_matrix.sa
+
+[PASS] data_structures\quantum_supply_chain_matrix.sa
+
+[PASS] data_structures\quantum_teleportation_matrix.sa
+
+[PASS] data_structures\quantum_testing_matrix.sa
+
+[PASS] data_structures\quantum_trading_matrix.sa
+
+[PASS] data_structures\quantum_transportation_matrix.sa
+
+[PASS] data_structures\quantum_tunneling_matrix.sa
+
+[PASS] data_structures\quantum_visualization_matrix.sa
+
+[PASS] data_structures\quasar_matrix.sa
+
+[FAIL] data_structures\queue.sa
+------------------------------------------------------------------------
+Error  : CrashError: Segmentation fault (stack overflow or bad memory access)
+Note   : Process-level crash — SEH exception caught
+
+--- Program Output ---
+  === Queue Implementation Test ===
+  Created new queue
+--- End Output ---
+
+--- Source Code (data_structures\queue.sa) ---
+       1 | # queue.sa - Queue Data Structure Implementation
+       2 | # C-style queue implementation in Quantum Language
+       3 | 
+       4 | # Queue class implementation
+       5 | class Queue {
+       6 |     constructor() {
+       7 |         this.items = [];
+       8 |         this.front = 0;
+       9 |         this.rear = -1;
+      10 |         this.size = 0;
+      11 |     }
+      12 |     
+      13 |     # Enqueue an element to the rear of the queue
+      14 |     enqueue(item) {
+      15 |         this.items.push(item);
+      16 |         this.rear++;
+      17 |         this.size++;
+      18 |     }
+      19 |     
+      20 |     # Dequeue an element from the front of the queue
+      21 |     dequeue() {
+      22 |         if (this.isEmpty()) {
+      23 |             print("Error: Queue underflow - cannot dequeue from empty queue");
+      24 |             return null;
+      25 |         }
+      26 |         
+      27 |         let item = this.items[this.front];
+      28 |         this.front++;
+      29 |         this.size--;
+      30 |         
+      31 |         # Reset pointers when queue becomes empty
+      32 |         if (this.isEmpty()) {
+      33 |             this.front = 0;
+      34 |             this.rear = -1;
+      35 |         }
+      36 |         
+      37 |         return item;
+      38 |     }
+      39 |     
+      40 |     # Peek at the front element without removing it
+      41 |     peek() {
+      42 |         if (this.isEmpty()) {
+      43 |             print("Error: Queue is empty - cannot peek");
+      44 |             return null;
+      45 |         }
+      46 |         return this.items[this.front];
+      47 |     }
+      48 |     
+      49 |     # Check if the queue is empty
+      50 |     isEmpty() {
+      51 |         return this.size == 0;
+      52 |     }
+      53 |     
+      54 |     # Get the current size of the queue
+      55 |     getSize() {
+      56 |         return this.size;
+      57 |     }
+      58 |     
+      59 |     # Clear the queue
+      60 |     clear() {
+      61 |         this.items = [];
+      62 |         this.front = 0;
+      63 |         this.rear = -1;
+      64 |         this.size = 0;
+      65 |     }
+      66 |     
+      67 |     # Display the queue contents
+      68 |     display() {
+      69 |         if (this.isEmpty()) {
+      70 |             print("Queue is empty");
+      71 |             return;
+      72 |         }
+      73 |         
+      74 |         print("Queue (front to rear):");
+      75 |         for (let i = this.front; i <= this.rear; i++) {
+      76 |             print("  ", this.items[i]);
+      77 |         }
+      78 |     }
+      79 |     
+      80 |     # Convert queue to array
+      81 |     toArray() {
+      82 |         let result = [];
+      83 |         for (let i = this.front; i <= this.rear; i++) {
+      84 |             result.push(this.items[i]);
+      85 |         }
+      86 |         return result;
+      87 |     }
+      88 | }
+      89 | 
+      90 | # Test the Queue implementation
+      91 | print("=== Queue Implementation Test ===");
+      92 | 
+      93 | let queue = Queue();
+      94 | print("Created new queue");
+      95 | print("Is queue empty?", queue.isEmpty());
+      96 | print("Queue size:", queue.getSize());
+      97 | 
+      98 | # Test enqueue operations
+      99 | print("\n--- Testing Enqueue Operations ---");
+     100 | queue.enqueue(10);
+     101 | queue.enqueue(20);
+     102 | queue.enqueue(30);
+     103 | queue.enqueue(40);
+     104 | queue.enqueue(50);
+     105 | 
+     106 | print("After enqueuing 5 elements:");
+     107 | queue.display();
+     108 | print("Queue size:", queue.getSize());
+     109 | print("Is queue empty?", queue.isEmpty());
+     110 | 
+     111 | # Test peek operation
+     112 | print("\n--- Testing Peek Operation ---");
+     113 | let front_element = queue.peek();
+     114 | print("Front element:", front_element);
+     115 | print("Queue size after peek:", queue.getSize());
+     116 | queue.display();
+     117 | 
+     118 | # Test dequeue operations
+     119 | print("\n--- Testing Dequeue Operations ---");
+     120 | let dequeued1 = queue.dequeue();
+     121 | print("Dequeued element:", dequeued1);
+     122 | print("Queue size after dequeue:", queue.getSize());
+     123 | queue.display();
+     124 | 
+     125 | let dequeued2 = queue.dequeue();
+     126 | print("Dequeued element:", dequeued2);
+     127 | print("Queue size after dequeue:", queue.getSize());
+     128 | queue.display();
+     129 | 
+     130 | # Test edge cases
+     131 | print("\n--- Testing Edge Cases ---");
+     132 | print("Dequeuing all remaining elements:");
+     133 | while (!queue.isEmpty()) {
+     134 |     let element = queue.dequeue();
+     135 |     print("  Dequeued:", element);
+     136 | }
+     137 | 
+     138 | print("Final queue size:", queue.getSize());
+     139 | print("Is queue empty?", queue.isEmpty());
+     140 | 
+     141 | # Test dequeuing from empty queue
+     142 | print("\nTesting dequeue from empty queue:");
+     143 | let empty_dequeue = queue.dequeue();
+     144 | print("Result:", empty_dequeue);
+     145 | 
+     146 | # Test peek from empty queue
+     147 | print("Testing peek from empty queue:");
+     148 | let empty_peek = queue.peek();
+     149 | print("Result:", empty_peek);
+     150 | 
+     151 | # Queue with different data types
+     152 | print("\n=== Queue with Different Data Types ===");
+     153 | let mixed_queue = Queue();
+     154 | 
+     155 | mixed_queue.enqueue("Hello");
+     156 | mixed_queue.enqueue(42);
+     157 | mixed_queue.enqueue(3.14);
+     158 | mixed_queue.enqueue(true);
+     159 | mixed_queue.enqueue([1, 2, 3]);
+     160 | 
+     161 | print("Mixed data type queue:");
+     162 | mixed_queue.display();
+     163 | 
+     164 | print("Dequeuing elements:");
+     165 | while (!mixed_queue.isEmpty()) {
+     166 |     let element = mixed_queue.dequeue();
+     167 |     print("  Type:", typeof(element), "Value:", element);
+     168 | }
+     169 | 
+     170 | # Queue application: Task scheduling
+     171 | print("\n=== Queue Application: Task Scheduling ===");
+     172 | 
+     173 | class TaskScheduler {
+     174 |     constructor() {
+     175 |         this.task_queue = Queue();
+     176 |         this.completed_tasks = [];
+     177 |     }
+     178 |     
+     179 |     add_task(task_name, priority) {
+     180 |         let task = {
+     181 |             "name": task_name,
+     182 |             "priority": priority,
+     183 |             "added_time": time()
+     184 |         };
+     185 |         this.task_queue.enqueue(task);
+     186 |         print("Added task:", task_name, "(Priority:", priority, ")");
+     187 |     }
+     188 |     
+     189 |     execute_next_task() {
+     190 |         if (this.task_queue.isEmpty()) {
+     191 |             print("No tasks to execute");
+     192 |             return;
+     193 |         }
+     194 |         
+     195 |         let task = this.task_queue.dequeue();
+     196 |         print("Executing task:", task.name, "(Priority:", task.priority, ")");
+     197 |         
+     198 |         # Simulate task execution
+     199 |         sleep(0.1);
+     200 |         
+     201 |         task.completed_time = time();
+     202 |         this.completed_tasks.push(task);
+     203 |         print("Completed task:", task.name);
+     204 |     }
+     205 |     
+     206 |     show_pending_tasks() {
+     207 |         if (this.task_queue.isEmpty()) {
+     208 |             print("No pending tasks");
+     209 |             return;
+     210 |         }
+     211 |         
+     212 |         print("Pending tasks:");
+     213 |         let tasks = this.task_queue.toArray();
+     214 |         for (let i = 0; i < len(tasks); i++) {
+     215 |             print("  ", i + 1, ".", tasks[i].name, "(Priority:", tasks[i].priority, ")");
+     216 |         }
+     217 |     }
+     218 |     
+     219 |     show_completed_tasks() {
+     220 |         if (len(this.completed_tasks) == 0) {
+     221 |             print("No completed tasks");
+     222 |             return;
+     223 |         }
+     224 |         
+     225 |         print("Completed tasks:");
+     226 |         for (let i = 0; i < len(this.completed_tasks); i++) {
+     227 |             let task = this.completed_tasks[i];
+     228 |             print("  ", i + 1, ".", task.name, "(Priority:", task.priority, ")");
+     229 |         }
+     230 |     }
+     231 | }
+     232 | 
+     233 | # Test task scheduler
+     234 | let scheduler = TaskScheduler();
+     235 | scheduler.add_task("Initialize system", 1);
+     236 | scheduler.add_task("Load configuration", 2);
+     237 | scheduler.add_task("Start services", 3);
+     238 | scheduler.add_task("Run diagnostics", 2);
+     239 | 
+     240 | print("\n--- Pending Tasks ---");
+     241 | scheduler.show_pending_tasks();
+     242 | 
+     243 | print("\n--- Executing Tasks ---");
+     244 | scheduler.execute_next_task();
+     245 | scheduler.execute_next_task();
+     246 | scheduler.execute_next_task();
+     247 | 
+     248 | print("\n--- Remaining Tasks ---");
+     249 | scheduler.show_pending_tasks();
+     250 | 
+     251 | print("\n--- Completed Tasks ---");
+     252 | scheduler.show_completed_tasks();
+     253 | 
+     254 | # Queue application: Breadth-First Search (BFS)
+     255 | print("\n=== Queue Application: BFS ===");
+     256 | 
+     257 | function bfs_graph_traversal(graph, start_vertex) {
+     258 |     let num_vertices = len(graph);
+     259 |     let visited = [];
+     260 |     let queue = Queue();
+     261 |     let traversal_order = [];
+     262 |     
+     263 |     # Initialize visited array
+     264 |     for (let i = 0; i < num_vertices; i++) {
+     265 |         visited.push(false);
+     266 |     }
+     267 |     
+     268 |     # Start BFS
+     269 |     visited[start_vertex] = true;
+     270 |     queue.enqueue(start_vertex);
+     271 |     
+     272 |     while (!queue.isEmpty()) {
+     273 |         let vertex = queue.dequeue();
+     274 |         traversal_order.push(vertex);
+     275 |         
+     276 |         # Visit all adjacent vertices
+     277 |         for (let i = 0; i < len(graph[vertex]); i++) {
+     278 |             let adjacent = graph[vertex][i];
+     279 |             if (!visited[adjacent]) {
+     280 |                 visited[adjacent] = true;
+     281 |                 queue.enqueue(adjacent);
+     282 |             }
+     283 |         }
+     284 |     }
+     285 |     
+     286 |     return traversal_order;
+     287 | }
+     288 | 
+     289 | # Create a test graph
+     290 | let graph = [
+     291 |     [1, 2],      # Vertex 0 connected to 1, 2
+     292 |     [0, 3, 4],   # Vertex 1 connected to 0, 3, 4
+     293 |     [0, 4],      # Vertex 2 connected to 0, 4
+     294 |     [1, 5],      # Vertex 3 connected to 1, 5
+     295 |     [1, 2, 5],   # Vertex 4 connected to 1, 2, 5
+     296 |     [3, 4]       # Vertex 5 connected to 3, 4
+     297 | ];
+     298 | 
+     299 | print("Graph adjacency list:");
+     300 | for (let i = 0; i < len(graph); i++) {
+     301 |     print("Vertex", i, ":", graph[i]);
+     302 | }
+     303 | 
+     304 | let bfs_order = bfs_graph_traversal(graph, 0);
+     305 | print("BFS traversal order starting from vertex 0:", bfs_order);
+     306 | 
+     307 | # Queue application: Print queue simulation
+     308 | print("\n=== Queue Application: Print Queue Simulation ===");
+     309 | 
+     310 | class PrintQueue {
+     311 |     constructor() {
+     312 |         this.print_queue = Queue();
+     313 |         this.completed_jobs = [];
+     314 |     }
+     315 |     
+     316 |     add_print_job(document_name, pages, priority) {
+     317 |         let job = {
+     318 |             "document": document_name,
+     319 |             "pages": pages,
+     320 |             "priority": priority,
+     321 |             "timestamp": time()
+     322 |         };
+     323 |         this.print_queue.enqueue(job);
+     324 |         print("Added print job:", document_name, "(", pages, "pages, Priority:", priority, ")");
+     325 |     }
+     326 |     
+     327 |     process_print_job() {
+     328 |         if (this.print_queue.isEmpty()) {
+     329 |             print("No print jobs in queue");
+     330 |             return;
+     331 |         }
+     332 |         
+     333 |         let job = this.print_queue.dequeue();
+     334 |         print("Printing:", job.document, "(", job.pages, "pages)");
+     335 |         
+     336 |         # Simulate printing time
+     337 |         sleep(0.05 * job.pages);
+     338 |         
+     339 |         job.completed_time = time();
+     340 |         this.completed_jobs.push(job);
+     341 |         print("Completed printing:", job.document);
+     342 |     }
+     343 |     
+     344 |     show_queue_status() {
+     345 |         if (this.print_queue.isEmpty()) {
+     346 |             print("Print queue is empty");
+     347 |             return;
+     348 |         }
+     349 |         
+     350 |         print("Print queue (", this.print_queue.getSize(), "jobs):");
+     351 |         let jobs = this.print_queue.toArray();
+     352 |         for (let i = 0; i < len(jobs); i++) {
+     353 |             print("  ", i + 1, ".", jobs[i].document, "(", jobs[i].pages, "pages)");
+     354 |         }
+     355 |     }
+     356 | }
+     357 | 
+     358 | # Test print queue
+     359 | let print_queue = PrintQueue();
+     360 | print_queue.add_print_job("Document1.pdf", 5, 2);
+     361 | print_queue.add_print_job("Report.docx", 10, 1);
+     362 | print_queue.add_print_job("Presentation.pptx", 15, 3);
+     363 | 
+     364 | print("\n--- Queue Status ---");
+     365 | print_queue.show_queue_status();
+     366 | 
+     367 | print("\n--- Processing Print Jobs ---");
+     368 | print_queue.process_print_job();
+     369 | print_queue.process_print_job();
+     370 | print_queue.show_queue_status();
+     371 | 
+     372 | # Circular Queue implementation
+     373 | print("\n=== Circular Queue Implementation ===");
+     374 | 
+     375 | class CircularQueue {
+     376 |     constructor(capacity) {
+     377 |         this.capacity = capacity;
+     378 |         this.items = [];
+     379 |         for (let i = 0; i < capacity; i++) {
+     380 |             this.items.push(null);
+     381 |         }
+     382 |         this.front = -1;
+     383 |         this.rear = -1;
+     384 |         this.size = 0;
+     385 |     }
+     386 |     
+     387 |     isFull() {
+     388 |         return this.size == this.capacity;
+     389 |     }
+     390 |     
+     391 |     isEmpty() {
+     392 |         return this.size == 0;
+     393 |     }
+     394 |     
+     395 |     enqueue(item) {
+     396 |         if (this.isFull()) {
+     397 |             print("Error: Circular queue is full");
+     398 |             return false;
+     399 |         }
+     400 |         
+     401 |         if (this.isEmpty()) {
+     402 |             this.front = 0;
+     403 |         }
+     404 |         
+     405 |         this.rear = (this.rear + 1) % this.capacity;
+     406 |         this.items[this.rear] = item;
+     407 |         this.size++;
+     408 |         return true;
+     409 |     }
+     410 |     
+     411 |     dequeue() {
+     412 |         if (this.isEmpty()) {
+     413 |             print("Error: Circular queue is empty");
+     414 |             return null;
+     415 |         }
+     416 |         
+     417 |         let item = this.items[this.front];
+     418 |         this.items[this.front] = null;
+     419 |         
+     420 |         if (this.front == this.rear) {
+     421 |             # Queue becomes empty
+     422 |             this.front = -1;
+     423 |             this.rear = -1;
+     424 |         } else {
+     425 |             this.front = (this.front + 1) % this.capacity;
+     426 |         }
+     427 |         
+     428 |         this.size--;
+     429 |         return item;
+     430 |     }
+     431 |     
+     432 |     display() {
+     433 |         if (this.isEmpty()) {
+     434 |             print("Circular queue is empty");
+     435 |             return;
+     436 |         }
+     437 |         
+     438 |         print("Circular queue (front to rear):");
+     439 |         let i = this.front;
+     440 |         while (true) {
+     441 |             print("  ", this.items[i]);
+     442 |             if (i == this.rear) break;
+     443 |             i = (i + 1) % this.capacity;
+     444 |         }
+     445 |     }
+     446 | }
+     447 | 
+     448 | # Test circular queue
+     449 | let circular_queue = CircularQueue(5);
+     450 | print("Created circular queue with capacity 5");
+     451 | 
+     452 | circular_queue.enqueue(10);
+     453 | circular_queue.enqueue(20);
+     454 | circular_queue.enqueue(30);
+     455 | circular_queue.display();
+     456 | 
+     457 | print("Dequeued:", circular_queue.dequeue());
+     458 | circular_queue.display();
+     459 | 
+     460 | circular_queue.enqueue(40);
+     461 | circular_queue.enqueue(50);
+     462 | circular_queue.enqueue(60);
+     463 | circular_queue.display();
+     464 | 
+     465 | print("Trying to add to full queue:");
+     466 | circular_queue.enqueue(70);
+     467 | 
+     468 | # Performance test
+     469 | print("\n=== Performance Test ===");
+     470 | 
+     471 | function performance_test() {
+     472 |     let large_queue = Queue();
+     473 |     let num_operations = 10000;
+     474 |     
+     475 |     # Test enqueue performance
+     476 |     let start_time = time();
+     477 |     for (let i = 0; i < num_operations; i++) {
+     478 |         large_queue.enqueue(i);
+     479 |     }
+     480 |     let enqueue_time = time() - start_time;
+     481 |     
+     482 |     # Test dequeue performance
+     483 |     start_time = time();
+     484 |     while (!large_queue.isEmpty()) {
+     485 |         large_queue.dequeue();
+     486 |     }
+     487 |     let dequeue_time = time() - start_time;
+     488 |     
+     489 |     print("Performance test with", num_operations, "operations:");
+     490 |     print("Enqueue time:", enqueue_time, "seconds");
+     491 |     print("Dequeue time:", dequeue_time, "seconds");
+     492 |     print("Total time:", enqueue_time + dequeue_time, "seconds");
+     493 | }
+     494 | 
+     495 | performance_test();
+--- End Source ---
+
+========================================================================
+
+[PASS] data_structures\quilt_pattern_matrix.sa
+
+[PASS] data_structures\red_giant_matrix.sa
+
+[PASS] data_structures\reverse_columns_matrix.sa
+
+[PASS] data_structures\reverse_matrix.sa
+
+[PASS] data_structures\reverse_rows_matrix.sa
+
+[PASS] data_structures\ring_pattern_matrix.sa
+
+[PASS] data_structures\ripple_pattern_matrix.sa
+
+[PASS] data_structures\rotate_matrix_180.sa
+
+[PASS] data_structures\rotate_matrix_270.sa
+
+[PASS] data_structures\rotate_matrix_90.sa
+
+[PASS] data_structures\singularity_matrix.sa
+
+[PASS] data_structures\snake_pattern_matrix.sa
+
+[PASS] data_structures\snowflake_pattern_matrix.sa
+
+[PASS] data_structures\spacetime_curvature_matrix.sa
+
+[PASS] data_structures\sparse_matrix_checker.sa
+
+[PASS] data_structures\spiral_flower_matrix.sa
+
+[PASS] data_structures\spiral_galaxy_matrix.sa
+
+[PASS] data_structures\spiral_matrix.sa
+
+[PASS] data_structures\spiral_shell_matrix.sa
+
+[PASS] data_structures\star_pattern_matrix.sa
+
+[PASS] data_structures\starburst_pattern_matrix.sa
+
+[PASS] data_structures\stargate_matrix.sa
+
+[PASS] data_structures\string_theory_matrix.sa
+
+[PASS] data_structures\subspace_matrix.sa
+
+[PASS] data_structures\sunburst_pattern_matrix.sa
+
+[PASS] data_structures\supernova_matrix.sa
+
+[PASS] data_structures\t_pattern_matrix.sa
+
+[PASS] data_structures\tile_pattern_matrix.sa
+
+[PASS] data_structures\time_vortex_matrix.sa
+
+[PASS] data_structures\tornado_pattern_matrix.sa
+
+[PASS] data_structures\twisted_pattern_matrix.sa
+
+[PASS] data_structures\twistor_theory_matrix.sa
+
+[PASS] data_structures\upper_triangular_matrix.sa
+
+[PASS] data_structures\v_pattern_matrix.sa
+
+[PASS] data_structures\vertical_flip_matrix.sa
+
+[PASS] data_structures\vertical_stripe_matrix.sa
+
+[PASS] data_structures\vortex_pattern_matrix.sa
+
+[PASS] data_structures\warp_field_matrix.sa
+
+[PASS] data_structures\wave_interference_matrix.sa
+
+[PASS] data_structures\wave_pattern_matrix.sa
+
+[PASS] data_structures\weave_pattern_matrix.sa
+
+[PASS] data_structures\web_pattern_matrix.sa
+
+[PASS] data_structures\whirlpool_pattern_matrix.sa
+
+[PASS] data_structures\white_dwarf_matrix.sa
+
+[PASS] data_structures\window_pattern_matrix.sa
+
+[PASS] data_structures\wormhole_matrix.sa
+
+[PASS] data_structures\x_pattern_matrix.sa
+
+[PASS] data_structures\z_pattern_matrix.sa
+
+[PASS] data_structures\zigzag_pattern_matrix.sa
+
+========================================================================
+Result: FAILED 1/230 files
+Passed : 229   Failed : 1   Total : 230

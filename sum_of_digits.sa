@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int num, digit, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    int original = num;
+    while (num > 0) {
+        digit = num % 10;
+        sum += digit;
+        num /= 10;
+    }
+    
+    printf("Sum of digits of %d is %d\n", original, sum);
+    return 0;
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter size of matrix: ");
+    scanf("%d", &n);
+    
+    int matrix[n][n];
+    printf("Enter matrix elements:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    
+    int sum = 0;
+    for (int i = 1; i < n - 1; i++) {
+        for (int j = 1; j < n - 1; j++) {
+            sum += matrix[i][j];
+        }
+    }
+    
+    printf("Sum of non-boundary elements: %d\n", sum);
+    return 0;
+}

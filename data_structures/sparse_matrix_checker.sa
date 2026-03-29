@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter size of matrix: ");
+    scanf("%d", &n);
+    
+    int matrix[n][n];
+    printf("Enter matrix elements:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    
+    int isSparse = 0;
+    int totalElements = n * n;
+    int zeroCount = 0;
+    
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (matrix[i][j] == 0) {
+                zeroCount++;
+            }
+        }
+    }
+    
+    if (zeroCount > totalElements / 2) {
+        isSparse = 1;
+    }
+    
+    if (isSparse) {
+        printf("Matrix is sparse matrix\n");
+    } else {
+        printf("Matrix is not sparse matrix\n");
+    }
+    
+    return 0;
+}
